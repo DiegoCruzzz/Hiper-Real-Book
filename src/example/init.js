@@ -79,9 +79,28 @@ class Wrapper extends Component {
           icon: "error-circle",
         },
       });
-      newFile.icon = "default";
+
       files.push(newFile);
     });
+    files.push(
+      new File("c:/My Documents/Hyper Real/leia-me.txt", {
+        label: "leia-me.txt",
+        icon: "text",
+        appProps: {
+          app: "Reader",
+        },
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/16/esperança mística.txt", {
+        label: "esperança mística.txt",
+        icon: "text",
+        appProps: {
+          app: "Reader",
+          content: "esperanca-mistica"
+        },
+      })
+    );
   }
   componentDidMount() {
     this.createFilesystem();

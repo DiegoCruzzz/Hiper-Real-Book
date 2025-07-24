@@ -5,19 +5,16 @@ import HTML from "../../components/HTML";
 import Share from "../../components/Toolbar/Share";
 import "./reader.css";
 
-// const loadedScripts = {};
-// function loadScript(src) {
-//   const promise = Promise((resolve, reject) => {
-//     const s = document.createElement("script");
-//     s.onload = resolve;
-//     s.error = reject;
-//     s.src = src;
-//     document.head.appendChild(s);
-//   });
-//
-//   loadedScripts[src] = promise;
-//   return promise;
-// }
+//Book Content
+import {LeiaMe} from "../../content/leia-me";
+import {EsperancaMistica} from "../../content/16/esperanca-mistica";
+
+//Content Directory
+const contentComponents = {
+  "leia-me": LeiaMe,
+  "esperanca-mistica": EsperancaMistica,
+
+};
 
 function loadTwitter() {
   window.twttr = (function (d, s, id) {
@@ -46,10 +43,11 @@ class Reader extends Component {
   componentDidUpdate() {
     this.initSocials();
   }
+
   initSocials() {
     const { content } = this.props;
     if (!this.el) return;
-    if (content && content.includes("twitter-tweet")) {
+    if (typeof content === "string" && content.includes("twitter-tweet")) {
       loadTwitter();
       try {
         window.twttr.widgets.load(this.el);
@@ -58,8 +56,8 @@ class Reader extends Component {
       }
     }
 
-    this.el.querySelectorAll('a[href^="/"]').forEach((link) => {
-      if (link.href.match(/\/[^/]/) && !link.dataset.transformed)
+    this.el?.querySelectorAll?.('a[href^="/"]')?.forEach((link) => {
+      if (link.href.match(/\/[^/]/) && !link.dataset.transformed) {
         link.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -67,26 +65,15 @@ class Reader extends Component {
             permalink: link.href,
           });
         });
-      link.dataset.transformed = true;
+        link.dataset.transformed = true;
+      }
     });
-
-    // Make hash links work. This doesn't work, not sure why yet
-    // this.el.querySelectorAll('a[href^="#"]').forEach(link => {
-    //   link.addEventListener("click", e => {
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     const target =
-    //       document.querySelector(e.target.hash) ||
-    //       document.querySelector(`[name="${e.target.hash.slice(1)}"]`);
-    //     console.log({ target });
-    //     if (!target) return;
-    //     this.scrollable.scrollTop = target.offsetTop;
-    //   });
-    // });
   }
+
   render({ content, wmProps }) {
-    // Lazy split pages by <hr>. Potentially buggy. Be careful.
-    const pages = (content || "").split(/<hr[^>]*>/);
+    const ContentComponent =
+      typeof content === "string" ? contentComponents[content] : null;
+
     return (
       <Window
         icon="wordpad"
@@ -98,16 +85,19 @@ class Reader extends Component {
         <Share />
         <ScrollableContainer ref={(el) => (this.scrollable = el)}>
           <article className="ui95__reader-wrap" ref={(el) => (this.el = el)}>
-            {pages.map((page, i) => (
-              <div key={i} className="ui95__reader-page">
-                <HTML html={page} />
-              </div>
-            ))}
+            {ContentComponent ? (
+              <ContentComponent />
+            ) : (
+              <p>
+                <b>⚠️ No se encontró el contenido:</b> <code>{content}</code>
+              </p>
+            )}
           </article>
         </ScrollableContainer>
       </Window>
     );
   }
+
 }
 
 Reader.prototype.getInitialState = function () {

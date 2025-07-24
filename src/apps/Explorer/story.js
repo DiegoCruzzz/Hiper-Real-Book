@@ -7,42 +7,42 @@ import { Filesystem, File } from "../../lib/filesystem";
 
 const fs = new Filesystem();
 
+// Estructura de carpetas
 fs.files.push(
-  new File("c:", {
+  new File("My Computer", {
+    label: "My Computer",
+    description: "Your local computer",
+  }),
+  new File("My Computer/c:", {
     label: "C:",
-    description: "Spinny disk",
+    description: "Local Disk",
     layout: "details",
     columns: ["size", "date"],
     defaultSort: ["date", false],
+  }),
+  new File("My Computer/c:/My Documents", {
+    label: "My Documents",
+    icon: "mydocuments",
+    description: "Personal files and folders",
+  }),
+  new File("My Computer/c:/My Documents/Hyper Real", {
+    label: "Hyper Real",
+    icon: "mydocuments",
+    description: "Art and hyperreality content",
   })
 );
-
-[...new Array(100)].forEach((val, i) => {
-  fs.files.push(
-    new File("c:/file " + i, {
-      label: "file " + i,
-      size: i + " kb",
-      date: new Date(Date.now() - Math.random() * 1e10),
-    })
-  );
-});
 
 export default {
   title: "App/Explorer",
 };
 
-export const NoConfiguration = () => (
+export const Root = () => (
   <Explorer wmProps={{ fs, setAppState: () => {} }} path="/" />
 );
 
-NoConfiguration.story = {
-  name: "No configuration",
-};
-
-export const SmallWindow = () => (
-  <Explorer wmProps={{ fs, setAppState: () => {}, width: 400 }} path="/" />
+export const Documents = () => (
+  <Explorer
+    wmProps={{ fs, setAppState: () => {} }}
+    path="My Computer/c:/My Documents"
+  />
 );
-
-SmallWindow.story = {
-  name: "Small window",
-};

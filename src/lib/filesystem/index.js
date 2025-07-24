@@ -34,12 +34,12 @@ class File {
       return (this.icon = "default");
     if (["avi"].includes(this.extension.toLowerCase()))
       return (this.icon = "video");
-    return (this.icon = "document");
+      return (this.icon = "document");
+    }
+    fullPath() {
+      return [this.path, this.filename].join("/");
+    }
   }
-  fullPath() {
-    return [this.path, this.filename].join("/");
-  }
-}
 
 class Filesystem {
   constructor({ files } = {}) {

@@ -1,7 +1,7 @@
 import { h, render, Component } from "preact";
 import "./style.css";
 
-import builtIn from "icons95";
+import builtIn from "../../../icons95";
 
 builtIn[24].default = builtIn[16].default;
 

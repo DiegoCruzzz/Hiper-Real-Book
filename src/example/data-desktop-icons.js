@@ -1,4 +1,6 @@
 import playlists from "./data-youtube.json";
+import leiaMe from "../content/leia-me";
+
 export default {
   "My Computer": {
     filename: "My Computer",
@@ -25,11 +27,11 @@ export default {
     }
   },
   Reader: {
-    filename: "Reader",
-    icon: "default",
+    filename: "leia-me.txt",
+    icon: "text",
     appProps: {
       app: "Reader",
-      content: require("./post.html")
+      content: 'leia-me',
     }
   },
 
@@ -60,14 +62,6 @@ export default {
       tabs: { General: [], "Device Manager": [], Performance: [] }
     }
   },
-  Talks: {
-    filename: "Talks",
-    icon: "default",
-    appProps: {
-      app: "Talks",
-      title: "Alert"
-    }
-  },
   Wizard: (function() {
     function generateStep() {
       return {
@@ -78,7 +72,6 @@ export default {
         buttonText: "Finish"
       };
     }
-
     return {
       filename: "Wizard",
       appProps: {
