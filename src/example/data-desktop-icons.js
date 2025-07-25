@@ -1,6 +1,4 @@
 import playlists from "./data-youtube.json";
-import leiaMe from "../content/leia-me";
-
 export default {
   "My Computer": {
     filename: "My Computer",

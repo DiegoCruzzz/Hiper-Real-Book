@@ -15,6 +15,7 @@ const mocks = `/COMMAND.COM
 /My Documents/Hyper Real/19
 /My Documents/Hyper Real/20
 /My Documents/Hyper Real/21
+/My Documents/Hyper Real/22
 
 /Windows/SYSTEM
 /Windows/WINSOCK.DLL
