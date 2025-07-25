@@ -25,7 +25,7 @@ export default [
     ]
   },
   { text: "Documents", icon: "documents" },
-  { text: "Settings", icon: "settings" },
+  { text: "Settings", icon: "settings", appProps: { app: "DisplayProperties" } },
   { text: "Search", icon: "search" },
   { text: "Help", icon: "help" },
   { text: "Run", icon: "run" },

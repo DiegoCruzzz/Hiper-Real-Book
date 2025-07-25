@@ -25,11 +25,6 @@ fs.files.push(
     icon: "mydocuments",
     description: "Personal files and folders",
   }),
-  new File("My Computer/c:/My Documents/Hyper Real", {
-    label: "Hyper Real",
-    icon: "mydocuments",
-    description: "Art and hyperreality content",
-  })
 );
 
 export default {

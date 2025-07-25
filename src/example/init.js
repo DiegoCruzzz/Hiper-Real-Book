@@ -13,6 +13,7 @@ import Alert from "../apps/Alert/";
 import Reader from "../apps/Reader/";
 import Talks from "../apps/Talks/";
 import TabDialog from "../apps/TabDialog/";
+import DisplayProperties from "../apps/DisplayProperties/";
 import startMenu from "./data-start";
 import desktopIcons from "./data-desktop-icons";
 const site = { title: "Example ui95 app" };
@@ -37,6 +38,7 @@ const apps = {
   Alert,
   Reader,
   TabDialog,
+  DisplayProperties,
   Talks,
   Loader,
 };
@@ -48,6 +50,9 @@ class Wrapper extends Component {
       fs: new Filesystem(),
     };
   }
+
+
+
   createFilesystem() {
     // make some folders and files.
     const files = this.state.fs.files;
@@ -66,6 +71,68 @@ class Wrapper extends Component {
       })
     );
     files.push(new File("c:", { label: "Local Disk (C:)" }));
+
+    //-------Folders-----------
+    files.push(
+      new File("c:/My Documents/Hyper Real", {
+          label: "Hyper Real",
+          description: "Carpeta de materiales artísticos",
+          icon: "folder",
+      })
+    );
+
+    files.push(
+      new File("c:/My Documents/Hyper Real/16", {
+          label: "16",
+          layout: "details",
+          columns: [ "Category", "Created"],
+          description: "16",
+          icon: "folder",
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/17", {
+          label: "17",
+          description: "17",
+          icon: "folder",
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/18", {
+          label: "18",
+          description: "18",
+          icon: "folder",
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/19", {
+          label: "19",
+          description: "19",
+          icon: "folder",
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/20", {
+          label: "20",
+          description: "20",
+          icon: "folder",
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/21", {
+          label: "21",
+          description: "21",
+          icon: "folder",
+      })
+    );
+    files.push(
+      new File("c:/My Documents/Hyper Real/22", {
+          label: "22",
+          description: "22",
+          icon: "folder",
+      })
+    );
+
     mockedFilesystem.forEach((path) => {
       const components = path.split("/");
       const label = components.pop().trim();
@@ -80,7 +147,6 @@ class Wrapper extends Component {
         },
       });
 
-      files.push(newFile);
     });
 
     //Leia-me in My Docs--------
@@ -90,6 +156,7 @@ class Wrapper extends Component {
         icon: "text",
         appProps: {
           app: "Reader",
+          content: "leia-me",
         },
       })
     );
@@ -98,7 +165,9 @@ class Wrapper extends Component {
     files.push(
       new File("c:/My Documents/Hyper Real/16/esperança mística.txt", {
         label: "esperança mística.txt",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         description: "Created at 2015/2/1 00:00",
         appProps: {
           app: "Reader",
@@ -109,7 +178,9 @@ class Wrapper extends Component {
     files.push(
       new File("c:/My Documents/Hyper Real/16/dores de ternura.txt", {
         label: "dores de ternura.txt",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         description: "Created at 2015/3/22 23:44",
         appProps: {
           app: "Reader",
@@ -120,7 +191,9 @@ class Wrapper extends Component {
     files.push(
       new File("c:/My Documents/Hyper Real/16/morte dos desejos abandonados.txt", {
         label: "morte dos desejos abandonados.txt",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         description: "Created at 2015/4/20 06:26",
         appProps: {
           app: "Reader",
@@ -132,7 +205,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/intermináveis impactos do tempo.txt", {
         label: "intermináveis impactos do tempo.txt",
         description: "Created at 2015/4/9 17:11",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "interminaveis-impactos"
@@ -143,7 +218,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/nômade.txt", {
         label: "nômade.txt",
         description: "Created at 2015/5/13 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "nomade"
@@ -153,7 +230,9 @@ class Wrapper extends Component {
     files.push(
       new File("c:/My Documents/Hyper Real/16/silheutas da existência.txt", {
         label: "silheutas da existência.txt",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         description: "Created at 2015/6/5 17:50",
         appProps: {
           app: "Reader",
@@ -165,7 +244,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/surpresa premeditada.txt", {
         label: "surpresa premeditada.txt",
         description: "Created at 2015/6/21 01:20",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "surpresa-premeditada"
@@ -176,7 +257,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/delírios isentos de dor.txt", {
         label: "delírios isentos de dor.txt",
         description: "Created at 2015/7/12 21:28",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "delirios-isentos"
@@ -187,7 +270,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/sobre você.txt", {
         label: "sobre você.txt",
         description: "Created at 2015/7/21 00:44",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "sobre-voce"
@@ -198,7 +283,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/3 da manhã.txt", {
         label: "3 da manhã.txt",
         description: "Created at 2015/7/23 02:50",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "3-da-manha"
@@ -209,7 +296,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/encantamento complicado.txt", {
         label: "encantamento complicado.txt",
         description: "Created at 2015/8/13 12:38",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "encantamento-complicado"
@@ -220,7 +309,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/duplipensando.txt", {
         label: "duplipensando.txt",
         description: "Created at 2015/8/16 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "duplipensando"
@@ -231,7 +322,9 @@ class Wrapper extends Component {
       new File("c:/My Documents/Hyper Real/16/dezesseis.jpeg", {
         label: "dezesseis.jpeg",
         description: "Created at 2014/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2015/4/9 17:11",
         appProps: {
           app: "Reader",
           content: "dezesseis"

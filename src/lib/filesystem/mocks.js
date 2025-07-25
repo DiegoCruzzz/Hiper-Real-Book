@@ -7,15 +7,6 @@ const mocks = `/COMMAND.COM
 /SCANDISK.LOG
 /Program Files
 /My Documents
-/My Documents/Hyper Real
-
-/My Documents/Hyper Real/16
-/My Documents/Hyper Real/17
-/My Documents/Hyper Real/18
-/My Documents/Hyper Real/19
-/My Documents/Hyper Real/20
-/My Documents/Hyper Real/21
-/My Documents/Hyper Real/22
 
 /Windows/SYSTEM
 /Windows/WINSOCK.DLL

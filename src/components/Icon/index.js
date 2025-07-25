@@ -24,8 +24,6 @@ function Icon({ name = "default", size = 16, classNames, style }) {
   const src = getSrc(name, size);
   const iconSize = size === "custom" ? undefined : size;
 
-  console.log(name, size, src);
-
   const className = [
     "ui95-icon",
     name,
