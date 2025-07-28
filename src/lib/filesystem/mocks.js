@@ -7,7 +7,6 @@ const mocks = `/COMMAND.COM
 /SCANDISK.LOG
 /Program Files
 /My Documents
-
 /Windows/SYSTEM
 /Windows/WINSOCK.DLL
 /Windows/WIN.INI

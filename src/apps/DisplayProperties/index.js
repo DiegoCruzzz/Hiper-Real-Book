@@ -1,76 +1,117 @@
-import { h, render, Component } from "preact";
+import { h, Component } from "preact";
 import "./style.css";
 import TabDialog from "../TabDialog";
 import TabBackground from "./TabBackground";
 
 const styles = {
-  Center: { backgroundRepeat: "no-repeat", backgroundSize: "auto" },
-  Tile: { backgroundRepeat: "repeat", backgroundSize: "auto" },
-  Stretch: { backgroundRepeat: "no-repeat", backgroundSize: "100% 100%" },
+  Center: { backgroundRepeat: "no-repeat", backgroundSize: "auto", backgroundPosition: "center" },
+  Tile: { backgroundRepeat: "repeat", backgroundSize: "auto", backgroundPosition: "initial" },
+  Stretch: { backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" },
 };
 
-export function updateVariables() {
-  let props;
+const DEFAULT_WALLPAPER_PATH = new URL("./TabBackground/wallpapers/HR_cover_01.png", import.meta.url).href;
+const DEFAULT_BACKGROUND_COLOR = "#008080";
 
+export function updateVariables() {
+  const root = document.documentElement;
+
+  let props = {};
   try {
-    props = JSON.parse(localStorage.displayProperties || "{}");
+    const storedProps = localStorage.displayProperties;
+    if (storedProps) {
+      props = JSON.parse(storedProps);
+    }
   } catch (e) {
-    props = JSON.parse(window.displayProperties || "{}");
+    console.error("Error al parsear localStorage.displayProperties, usando fallback o valores por defecto:", e);
+    try {
+      if (window.displayProperties) {
+        props = JSON.parse(window.displayProperties);
+      }
+    } catch (err) {
+      console.error("Error al parsear window.displayProperties:", err);
+    }
   }
 
-  Object.entries(props).map(([name, value]) =>
-    document.documentElement.style.setProperty(name, value)
-  );
+  // Establecer valores por defecto si no están presentes en props
+  root.style.setProperty('--background-color', props['--background-color'] || DEFAULT_BACKGROUND_COLOR);
+  root.style.setProperty('--background-image', props['--background-image'] || `url('${DEFAULT_WALLPAPER_PATH}')`); // Usa la imagen por defecto
+  root.style.setProperty('--background-repeat', props['--background-repeat'] || 'no-repeat');
+  root.style.setProperty('--background-size', props['--background-size'] || 'cover');
+  root.style.setProperty('--background-position', props['--background-position'] || 'center');
 }
 
-export default class DisplayProperties extends Component {
-  constructor() {
-    super();
 
-    // background state
-    const cs = getComputedStyle(document.body);
-    const backgroundRepeat = cs.getPropertyValue("--background-repeat").trim();
-    const backgroundSize = cs.getPropertyValue("--background-size").trim();
-    const backgroundImage = cs.getPropertyValue("--background-image").trim();
-    const backgroundColor = cs.getPropertyValue("--background-color").trim();
+export default class DisplayProperties extends Component {
+  constructor(props) {
+    super(props);
+    updateVariables(); // Asegura que las variables CSS estén seteadas
+
+    let initialDisplayProps = {};
+    try {
+      const storedProps = localStorage.displayProperties;
+      if (storedProps) {
+        initialDisplayProps = JSON.parse(storedProps);
+      }
+    } catch (e) {
+      console.warn("localStorage.displayProperties corrupto o no encontrado, inicializando con valores por defecto.");
+      const cs = getComputedStyle(document.documentElement);
+      initialDisplayProps = {
+        '--background-image': cs.getPropertyValue("--background-image").trim(),
+        '--background-repeat': cs.getPropertyValue("--background-repeat").trim(),
+        '--background-size': cs.getPropertyValue("--background-size").trim(),
+        '--background-color': cs.getPropertyValue("--background-color").trim(),
+        '--background-position': cs.getPropertyValue("--background-position").trim(),
+      };
+    }
+
+    const currentBackgroundImage = initialDisplayProps['--background-image'] || `url('${DEFAULT_WALLPAPER_PATH}')`;
+    const currentBackgroundRepeat = initialDisplayProps['--background-repeat'] || 'no-repeat';
+    const currentBackgroundSize = initialDisplayProps['--background-size'] || 'cover';
+    const currentBackgroundColor = initialDisplayProps['--background-color'] || DEFAULT_BACKGROUND_COLOR;
+    const currentBackgroundPosition = initialDisplayProps['--background-position'] || 'center';
 
     this.state = {
       background: {
-        wallpaper: backgroundImage,
-        style: (() => {
-          if (backgroundRepeat === "repeat") return "Tile";
-          if (backgroundSize === "100% 100%") return "Stretch";
-          return "Center";
-        })(),
-        backgroundColor,
+        wallpaper: currentBackgroundImage.startsWith('url(') ? currentBackgroundImage.slice(4, -1).replace(/['"]/g, '') : currentBackgroundImage,
+        style: "Stretch",
+        backgroundColor: currentBackgroundColor,
       },
     };
   }
+
   setBackground() {
     const { background } = this.state;
-    const style = styles[background.style];
-    const props = JSON.stringify({
-      "--background-repeat": style.backgroundRepeat,
-      "--background-size": style.backgroundSize,
-      "--background-image": "url(" + background.wallpaper + ")",
+    const styleConfig = styles["Stretch"];
+
+    const finalBackgroundImage = background.wallpaper === 'none' || background.wallpaper === ''
+      ? 'none'
+      : `url('${background.wallpaper}')`;
+
+    const propsToSave = {
+      "--background-repeat": styleConfig.backgroundRepeat,
+      "--background-size": styleConfig.backgroundSize,
+      "--background-image": finalBackgroundImage,
       "--background-color": background.backgroundColor,
-    });
+      "--background-position": styleConfig.backgroundPosition,
+    };
 
     try {
-      localStorage.displayProperties = props;
+      localStorage.displayProperties = JSON.stringify(propsToSave);
     } catch (e) {
-      window.displayProperties = props;
+      window.displayProperties = JSON.stringify(propsToSave);
+      console.warn("localStorage no disponible, usando window.displayProperties como fallback.");
     }
 
     updateVariables();
   }
+
   render(props) {
     const { background } = this.state;
     const tabs = {
       Background: (
         <TabBackground
           value={background}
-          onChange={(background) => this.setState({ background })}
+          onChange={(newBackground) => this.setState({ background: { ...newBackground, style: "Stretch" } })}
           styles={styles}
         />
       ),

@@ -173,7 +173,7 @@ class Reader extends Component {
       <Window
         icon="wordpad"
         className="reader"
-        width={800}
+        width={1000}
         height={600}
         {...wmProps}
       >

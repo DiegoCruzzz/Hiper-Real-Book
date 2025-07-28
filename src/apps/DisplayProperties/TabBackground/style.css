@@ -17,3 +17,44 @@
 .ui95-tab-background__tools-right {
 	padding-left: 10px;
 }
+
+.wallpaper-item {
+  cursor: pointer;
+}
+
+.wallpaper-item:hover,
+.wallpaper-item.active {
+  background: #0700AAFF;
+  color: white;
+  outline: 1px dotted black;
+}
+
+.wallpaper-item:hover .ui95-file-row__label,
+.wallpaper-item.active .ui95-file-row__label {
+  color: var(--color-primary-alt);
+}
+
+.wallpaper-thumbnail {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  margin-right: 4px;
+  border: 1px solid black;
+}
+
+.wallpaper-item {
+  cursor: pointer;
+}
+
+.wallpaper-item:hover,
+.wallpaper-item.active {
+  background: #0700AAFF;
+  color: white;
+  outline: 1px dotted black;
+}
+
+.wallpaper-item:hover .ui95-file-row__label,
+.wallpaper-item.active .ui95-file-row__label {
+  color: white;
+}
+

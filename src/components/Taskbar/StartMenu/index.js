@@ -12,7 +12,7 @@ export default class StartMenu extends Component {
   }
   render({
     items = [],
-    branding = { text1: "Windows", text2: "ME" },
+    branding = { text1: "HIPER", text2: "REAL" },
     attachTo,
     onLaunchApp,
   }) {

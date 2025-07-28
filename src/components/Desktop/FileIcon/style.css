@@ -19,11 +19,10 @@
 .ui95-file-icon--selected .ui95-text--label,
 .ui95-file-icon:hover .ui95-text--label,
 .ui95-file-icon:focus .ui95-text--label {
-  background: var(--color-primary);
-  color: var(--color-primary-alt);
+  background: #0700AAFF;
+  color: white;
 }
 
 .ui95-file-icon--solid-color .ui95-text--label {
-  background: var(--background-color);
-  color: var(--color-primary-alt);
+  color: white;
 }

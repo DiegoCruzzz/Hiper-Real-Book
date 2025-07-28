@@ -72,17 +72,25 @@ class Wrapper extends Component {
     );
     files.push(new File("c:", { label: "Local Disk (C:)" }));
 
+    files.push(
+      new File("c:/My Documents", {
+          label: "My Documents",
+          description: "My Documents",
+          icon: "mydocuments",
+      })
+    );
+
     //-------Folders-----------
     files.push(
-      new File("c:/My Documents/Hyper Real", {
-          label: "Hyper Real",
-          description: "Carpeta de materiales artísticos",
+      new File("c:/My Documents/Hiper Real", {
+          label: "Hiper Real",
+          description: "Hiper Real Folder",
           icon: "folder",
       })
     );
 
     files.push(
-      new File("c:/My Documents/Hyper Real/16", {
+      new File("c:/My Documents/Hiper Real/16", {
           label: "16",
           layout: "details",
           columns: [ "Category", "Created"],
@@ -91,48 +99,61 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/17", {
+      new File("c:/My Documents/Hiper Real/17", {
           label: "17",
+          layout: "details",
+          columns: [ "Category", "Created"],
           description: "17",
           icon: "folder",
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18", {
+      new File("c:/My Documents/Hiper Real/18", {
           label: "18",
+          layout: "details",
+          columns: [ "Category", "Created"],
           description: "18",
           icon: "folder",
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/19", {
+      new File("c:/My Documents/Hiper Real/19", {
           label: "19",
+          layout: "details",
+          columns: [ "Category", "Created"],
           description: "19",
           icon: "folder",
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/20", {
+      new File("c:/My Documents/Hiper Real/20", {
           label: "20",
+          layout: "details",
+          columns: [ "Category", "Created"],
           description: "20",
           icon: "folder",
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/21", {
+      new File("c:/My Documents/Hiper Real/21", {
           label: "21",
+          layout: "details",
+          columns: [ "Category", "Created"],
           description: "21",
           icon: "folder",
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/22", {
+      new File("c:/My Documents/Hiper Real/22", {
           label: "22",
+          layout: "details",
+          columns: [ "Category", "Created"],
           description: "22",
           icon: "folder",
       })
     );
 
+    //-----------------------------
     mockedFilesystem.forEach((path) => {
       const components = path.split("/");
       const label = components.pop().trim();
@@ -150,24 +171,24 @@ class Wrapper extends Component {
     });
 
     //Leia-me in My Docs--------
-    files.push(
-      new File("c:/My Documents/Hyper Real/leia-me.txt", {
-        label: "leia-me.txt",
-        icon: "text",
-        appProps: {
-          app: "Reader",
-          content: "leia-me",
-        },
-      })
-    );
+    // files.push(
+    //   new File("c:/My Documents/Hiper Real/leia-me.txt", {
+    //     label: "leia-me.txt",
+    //     icon: "text",
+    //     appProps: {
+    //       app: "Reader",
+    //       content: "leia-me",
+    //     },
+    //   })
+    // );
 
     //---------Folder 16--------------
     files.push(
-      new File("c:/My Documents/Hyper Real/16/esperança mística.txt", {
+      new File("c:/My Documents/Hiper Real/16/esperança mística.txt", {
         label: "esperança mística.txt",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/2/1 00:00",
         description: "Created at 2015/2/1 00:00",
         appProps: {
           app: "Reader",
@@ -176,11 +197,11 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/dores de ternura.txt", {
+      new File("c:/My Documents/Hiper Real/16/dores de ternura.txt", {
         label: "dores de ternura.txt",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/3/22 23:44",
         description: "Created at 2015/3/22 23:44",
         appProps: {
           app: "Reader",
@@ -189,11 +210,11 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/morte dos desejos abandonados.txt", {
+      new File("c:/My Documents/Hiper Real/16/morte dos desejos abandonados.txt", {
         label: "morte dos desejos abandonados.txt",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/4/20 06:26",
         description: "Created at 2015/4/20 06:26",
         appProps: {
           app: "Reader",
@@ -202,7 +223,7 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/intermináveis impactos do tempo.txt", {
+      new File("c:/My Documents/Hiper Real/16/intermináveis impactos do tempo.txt", {
         label: "intermináveis impactos do tempo.txt",
         description: "Created at 2015/4/9 17:11",
         icon: "wordpad",
@@ -215,12 +236,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/nômade.txt", {
+      new File("c:/My Documents/Hiper Real/16/nômade.txt", {
         label: "nômade.txt",
         description: "Created at 2015/5/13 00:00",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/5/13 00:00",
         appProps: {
           app: "Reader",
           content: "nomade"
@@ -228,11 +249,11 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/silheutas da existência.txt", {
+      new File("c:/My Documents/Hiper Real/16/silheutas da existência.txt", {
         label: "silheutas da existência.txt",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/6/5 17:50",
         description: "Created at 2015/6/5 17:50",
         appProps: {
           app: "Reader",
@@ -241,12 +262,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/surpresa premeditada.txt", {
+      new File("c:/My Documents/Hiper Real/16/surpresa premeditada.txt", {
         label: "surpresa premeditada.txt",
         description: "Created at 2015/6/21 01:20",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/6/21 01:20",
         appProps: {
           app: "Reader",
           content: "surpresa-premeditada"
@@ -254,12 +275,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/delírios isentos de dor.txt", {
+      new File("c:/My Documents/Hiper Real/16/delírios isentos de dor.txt", {
         label: "delírios isentos de dor.txt",
         description: "Created at 2015/7/12 21:28",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/7/12 21:28",
         appProps: {
           app: "Reader",
           content: "delirios-isentos"
@@ -267,12 +288,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/sobre você.txt", {
+      new File("c:/My Documents/Hiper Real/16/sobre você.txt", {
         label: "sobre você.txt",
         description: "Created at 2015/7/21 00:44",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/7/21 00:44",
         appProps: {
           app: "Reader",
           content: "sobre-voce"
@@ -280,12 +301,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/3 da manhã.txt", {
+      new File("c:/My Documents/Hiper Real/16/3 da manhã.txt", {
         label: "3 da manhã.txt",
         description: "Created at 2015/7/23 02:50",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/7/23 02:50",
         appProps: {
           app: "Reader",
           content: "3-da-manha"
@@ -293,12 +314,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/encantamento complicado.txt", {
+      new File("c:/My Documents/Hiper Real/16/encantamento complicado.txt", {
         label: "encantamento complicado.txt",
         description: "Created at 2015/8/13 12:38",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/8/13 12:38",
         appProps: {
           app: "Reader",
           content: "encantamento-complicado"
@@ -306,12 +327,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/duplipensando.txt", {
+      new File("c:/My Documents/Hiper Real/16/duplipensando.txt", {
         label: "duplipensando.txt",
         description: "Created at 2015/8/16 00:00",
         icon: "wordpad",
         Category: "Blog",
-        Created: "2015/4/9 17:11",
+        Created: "2015/8/16 00:00",
         appProps: {
           app: "Reader",
           content: "duplipensando"
@@ -319,12 +340,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/16/dezesseis.jpeg", {
+      new File("c:/My Documents/Hiper Real/16/dezesseis.jpeg", {
         label: "dezesseis.jpeg",
         description: "Created at 2014/9/4 00:00",
         icon: "paint",
         Category: "Image",
-        Created: "2015/4/9 17:11",
+        Created: "2014/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "dezesseis"
@@ -334,10 +355,12 @@ class Wrapper extends Component {
 
     //----------Folder 17------------
     files.push(
-      new File("c:/My Documents/Hyper Real/17/hastes frias.txt", {
+      new File("c:/My Documents/Hiper Real/17/hastes frias.txt", {
         label: "hastes frias.txt",
         description: "Created at 2015/11/17 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/11/17 00:00",
         appProps: {
           app: "Reader",
           content: "hastes-frias"
@@ -345,10 +368,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/17/impreciso.txt", {
+      new File("c:/My Documents/Hiper Real/17/impreciso.txt", {
         label: "impreciso.txt",
         description: "Created at 2015/11/17 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2015/11/17 00:00",
         appProps: {
           app: "Reader",
           content: "impreciso"
@@ -356,10 +381,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/17/último parágrafo.txt", {
+      new File("c:/My Documents/Hiper Real/17/último parágrafo.txt", {
         label: "último parágrafo.txt",
         description: "Created at 2016/4/21 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2016/4/21 00:00",
         appProps: {
           app: "Reader",
           content: "ultimo-paragrafo"
@@ -367,10 +394,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/17/dezessete.jpeg", {
+      new File("c:/My Documents/Hiper Real/17/dezessete.jpeg", {
         label: "dezessete.jpeg",
         description: "Created at 2015/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2015/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "dezessete"
@@ -379,10 +408,12 @@ class Wrapper extends Component {
     );
     //----------Folder 18------------
     files.push(
-      new File("c:/My Documents/Hyper Real/18/sentidos.txt", {
+      new File("c:/My Documents/Hiper Real/18/sentidos.txt", {
         label: "sentidos.txt",
         description: "Created at 2017/1/20 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/1/20 00:00",
         appProps: {
           app: "Reader",
           content: "sentidos"
@@ -390,10 +421,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/inefável.txt", {
+      new File("c:/My Documents/Hiper Real/18/inefável.txt", {
         label: "inefável.txt",
         description: "Created at 2017/5/8 05:32",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/5/8 05:32",
         appProps: {
           app: "Reader",
           content: "inefavel"
@@ -401,10 +434,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/trigo.txt", {
+      new File("c:/My Documents/Hiper Real/18/trigo.txt", {
         label: "trigo.txt",
         description: "Created at 2017/5/11 02:16",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/5/11 02:16",
         appProps: {
           app: "Reader",
           content: "trigo"
@@ -412,10 +447,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/senhorita v.txt", {
+      new File("c:/My Documents/Hiper Real/18/senhorita v.txt", {
         label: "senhorita v.txt",
         description: "Created at 2017/5/6 02:10",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/5/6 02:10",
         appProps: {
           app: "Reader",
           content: "senhorita-v"
@@ -423,10 +460,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/doce vermelho.txt", {
+      new File("c:/My Documents/Hiper Real/18/doce vermelho.txt", {
         label: "doce vermelho.txt",
         description: "Created at 2017/6/10 08:06",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/6/10 08:06",
         appProps: {
           app: "Reader",
           content: "doce-vermelho"
@@ -434,10 +473,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/sonhos.txt", {
+      new File("c:/My Documents/Hiper Real/18/sonhos.txt", {
         label: "sonhos.txt",
         description: "Created at 2017/6/28 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/6/28 00:00",
         appProps: {
           app: "Reader",
           content: "sonhos"
@@ -445,10 +486,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/29.08.2017.txt", {
+      new File("c:/My Documents/Hiper Real/18/29.08.2017.txt", {
         label: "29.08.2017.txt",
         description: "Created at 2017/8/29 07:32",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/8/29 07:32",
         appProps: {
           app: "Reader",
           content: "29.08.2017"
@@ -456,10 +499,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/18/dezoito.jpeg", {
+      new File("c:/My Documents/Hiper Real/18/dezoito.jpeg", {
         label: "dezoito.jpeg",
         description: "Created at 2016/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2016/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "dezoito"
@@ -468,10 +513,12 @@ class Wrapper extends Component {
     );
     //----------Folder 19------------
     files.push(
-      new File("c:/My Documents/Hyper Real/19/iteração.txt", {
+      new File("c:/My Documents/Hiper Real/19/iteração.txt", {
         label: "iteração.txt",
         description: "Created at 2017/12/5 06:51",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/12/5 06:51",
         appProps: {
           app: "Reader",
           content: "iteracao"
@@ -479,10 +526,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/19/fecho os olhos para ver.txt", {
+      new File("c:/My Documents/Hiper Real/19/fecho os olhos para ver.txt", {
         label: "fecho os olhos para ver.txt",
         description: "Created at 2017/12/5 06:51",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2017/12/5 06:51",
         appProps: {
           app: "Reader",
           content: "fecho-os-olhos"
@@ -490,10 +539,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/19/dezenove.jpeg", {
+      new File("c:/My Documents/Hiper Real/19/dezenove.jpeg", {
         label: "dezenove.jpeg",
         description: "Created at 2017/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2017/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "dezenove"
@@ -502,10 +553,12 @@ class Wrapper extends Component {
     );
     //----------Folder 20------------
     files.push(
-      new File("c:/My Documents/Hyper Real/20/iteração II.txt", {
+      new File("c:/My Documents/Hiper Real/20/iteração II.txt", {
         label: "iteração II.txt",
         description: "Created at 2018/12/3 02:11",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2018/12/3 02:11",
         appProps: {
           app: "Reader",
           content: "iteracao-2"
@@ -513,10 +566,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/20/ventos de marte.txt", {
+      new File("c:/My Documents/Hiper Real/20/ventos de marte.txt", {
         label: "ventos de marte.txt",
         description: "Created at 2019/2/17 14:32",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2019/2/17 14:32",
         appProps: {
           app: "Reader",
           content: "ventos-de-marte"
@@ -524,10 +579,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/20/meu, seu, dela e deles também.txt", {
+      new File("c:/My Documents/Hiper Real/20/meu, seu, dela e deles também.txt", {
         label: "meu, seu, dela e deles também.txt",
         description: "Created at 2019/5/28 01:11",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2019/5/28 01:11",
         appProps: {
           app: "Reader",
           content: "meu-seu-dela"
@@ -535,10 +592,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/20/está tudo bem bordar minhas veias na ternura da sua presença para que ela nunca desapareça.txt", {
+      new File("c:/My Documents/Hiper Real/20/está tudo bem bordar minhas veias na ternura da sua presença para que ela nunca desapareça.txt", {
         label: "está tudo bem bordar minhas veias na ternura da sua presença para que ela nunca desapareça.txt",
         description: "Created at 2019/9/3 23:59",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2019/9/3 23:59",
         appProps: {
           app: "Reader",
           content: "esta-tudo-bem"
@@ -546,10 +605,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/20/vinte.jpeg", {
+      new File("c:/My Documents/Hiper Real/20/vinte.jpeg", {
         label: "vinte.jpeg",
         description: "Created at 2018/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2018/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "vinte"
@@ -558,10 +619,12 @@ class Wrapper extends Component {
     );
     //----------Folder 21------------
     files.push(
-      new File("c:/My Documents/Hyper Real/21/stand by me.txt", {
+      new File("c:/My Documents/Hiper Real/21/stand by me.txt", {
         label: "stand by me.txt",
         description: "Created at 2019/9/25 00:32",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2019/9/25 00:32",
         appProps: {
           app: "Reader",
           content: "stand-by-me"
@@ -569,10 +632,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/21/saudações de verão.txt", {
+      new File("c:/My Documents/Hiper Real/21/saudações de verão.txt", {
         label: "saudações de verão.txt",
         description: "Created at 2020/3/26 16:15",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/3/26 16:15",
         appProps: {
           app: "Reader",
           content: "saudacoes-de-verao"
@@ -580,10 +645,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/21/nuclear.txt", {
+      new File("c:/My Documents/Hiper Real/21/nuclear.txt", {
         label: "nuclear.txt",
         description: "Created at 2020/4/1 15:38",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/4/1 15:38",
         appProps: {
           app: "Reader",
           content: "nuclear"
@@ -591,10 +658,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/21/frenesi cristalino.txt", {
+      new File("c:/My Documents/Hiper Real/21/frenesi cristalino.txt", {
         label: "frenesi cristalino.txt",
         description: "Created at 2020/8/28 07:10",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/8/28 07:10",
         appProps: {
           app: "Reader",
           content: "frenesi-cristalino"
@@ -602,10 +671,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/21/fobias.txt", {
+      new File("c:/My Documents/Hiper Real/21/fobias.txt", {
         label: "fobias.txt",
         description: "Created at 2020/9/3 17:58",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/9/3 17:58",
         appProps: {
           app: "Reader",
           content: "fobias"
@@ -613,10 +684,12 @@ class Wrapper extends Component {
       })
     );
       files.push(
-      new File("c:/My Documents/Hyper Real/21/ausência eternizada.txt", {
+      new File("c:/My Documents/Hiper Real/21/ausência eternizada.txt", {
         label: "ausência eternizada.txt",
         description: "Created at 2020/9/3 23:59",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/9/3 23:59",
         appProps: {
           app: "Reader",
           content: "ausencia-eternizada"
@@ -624,10 +697,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/21/vinte e um.jpeg", {
+      new File("c:/My Documents/Hiper Real/21/vinte e um.jpeg", {
         label: "vinte e um.jpeg",
         description: "Created at 2019/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2019/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "vinte-um"
@@ -636,10 +711,12 @@ class Wrapper extends Component {
     );
     //----------Folder 22------------
     files.push(
-      new File("c:/My Documents/Hyper Real/22/você disse alguma coisa.txt", {
+      new File("c:/My Documents/Hiper Real/22/você disse alguma coisa.txt", {
         label: "você disse alguma coisa.txt",
         description: "Created at 2020/12/14 04:09",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/12/14 04:09",
         appProps: {
           app: "Reader",
           content: "voce-disse-alguma"
@@ -647,10 +724,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/22/matéria cinza.txt", {
+      new File("c:/My Documents/Hiper Real/22/matéria cinza.txt", {
         label: "matéria cinza.txt",
-        description: "Created at 22020/12/15 01:20",
-        icon: "text",
+        description: "Created at 2020/12/15 01:20",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2020/12/15 01:20",
         appProps: {
           app: "Reader",
           content: "materia-cinza"
@@ -658,21 +737,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/22/matéria cinza.txt", {
-        label: "matéria cinza.txt",
-        description: "Created at 22020/12/15 01:20",
-        icon: "text",
-        appProps: {
-          app: "Reader",
-          content: "materia-cinza"
-        },
-      })
-    );
-    files.push(
-      new File("c:/My Documents/Hyper Real/22/observação panorâmica de novas partículas.txt", {
+      new File("c:/My Documents/Hiper Real/22/observação panorâmica de novas partículas.txt", {
         label: "observação panorâmica de novas partículas.txt",
         description: "Created at 2021/4/1 00:00",
-        icon: "text",
+        icon: "wordpad",
+        Category: "Blog",
+        Created: "2021/4/1 00:00",
         appProps: {
           app: "Reader",
           content: "observacao-panoramica"
@@ -680,10 +750,12 @@ class Wrapper extends Component {
       })
     );
     files.push(
-      new File("c:/My Documents/Hyper Real/22/vinte e dois.jpeg", {
+      new File("c:/My Documents/Hiper Real/22/vinte e dois.jpeg", {
         label: "vinte e dois.jpeg",
         description: "Created at 2020/9/4 00:00",
-        icon: "media",
+        icon: "paint",
+        Category: "Image",
+        Created: "2020/9/4 00:00",
         appProps: {
           app: "Reader",
           content: "vinte-dois"
