@@ -9,9 +9,9 @@ import DisplayPreview from "../DisplayPreview";
 
 const wallpapersData = [
   { label: "None", path: "none" },
-  { label: "Cover 01", path: new URL("./wallpapers/HR_cover_01.png", import.meta.url).href },
-  { label: "Cover 02", path: new URL("./wallpapers/HR_cover_02.png", import.meta.url).href },
-  { label: "Cover 03", path: new URL("./wallpapers/HR_cover_03.png", import.meta.url).href },
+  { label: "Cover 01", path: new URL("./wallpapers/HR_Cover_01.png", import.meta.url).href },
+  { label: "Cover 02", path: new URL("./wallpapers/HR_Cover_02.png", import.meta.url).href },
+  { label: "Cover 03", path: new URL("./wallpapers/HR_Cover_03.png", import.meta.url).href },
 ];
 
 export default function TabBackground({ styles, value, onChange }) {
