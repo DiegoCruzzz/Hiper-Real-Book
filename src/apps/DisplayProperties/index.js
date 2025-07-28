@@ -9,7 +9,7 @@ const styles = {
   Stretch: { backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" },
 };
 
-const DEFAULT_WALLPAPER_PATH = new URL("./TabBackground/wallpapers/HR_cover_01.png", import.meta.url).href;
+const DEFAULT_WALLPAPER_PATH = new URL("./TabBackground/wallpapers/HR_Cover_01.png", import.meta.url).href;
 const DEFAULT_BACKGROUND_COLOR = "#008080";
 
 export function updateVariables() {
