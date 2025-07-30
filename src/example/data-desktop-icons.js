@@ -16,14 +16,14 @@ export default {
       path: "/c:/My Documents"
     }
   },
-  "Media Player": {
-    filename: "Media Player",
-    icon: "video",
-    appProps: {
-      app: "MediaPlayer",
-      playlists
-    }
-  },
+  // "Media Player": {
+  //   filename: "Media Player",
+  //   icon: "video",
+  //   appProps: {
+  //     app: "MediaPlayer",
+  //     playlists
+  //   }
+  // },
   Reader: {
     filename: "leia-me.txt",
     icon: "text",
@@ -32,22 +32,12 @@ export default {
       content: 'leia-me',
     }
   },
-  "Video Test 1": {
-    filename: "Video Test 1",
-    icon: "video",
-    appProps: {
-      app: "MediaPlayer",
-      mode: "renderCurrentlyPlaying",
-      videoId: "ZbZSe6N_BXs",
-      playlists: []
-    }
-  },
-  "WebView test": {
-    filename: "WebView test 1",
+  "@doxpheal": {
+    filename: "@doxpheal",
     icon: "default",
     appProps: {
-      app: "Webview",
-      videoId: "https://www.google.com/",
+      app: "ExternalLinkApp",
+      url: "https://www.youtube.com/@doxpheal"
     }
   },
 

@@ -14,6 +14,7 @@ import Reader from "../apps/Reader/";
 import Talks from "../apps/Talks/";
 import TabDialog from "../apps/TabDialog/";
 import DisplayProperties from "../apps/DisplayProperties/";
+import ExternalLinkApp from "../apps/ExternalLink";
 import startMenu from "./data-start";
 import desktopIcons from "./data-desktop-icons";
 const site = { title: "Example ui95 app" };
@@ -39,6 +40,7 @@ const apps = {
   Reader,
   TabDialog,
   DisplayProperties,
+  ExternalLinkApp,
   Talks,
   Loader,
 };
@@ -100,6 +102,34 @@ class Wrapper extends Component {
       appProps: {
         app: "Reader",
         content,
+      },
+    });
+  }
+
+  createLinkFile(basePath, icon, filename, url, createdDate) {
+    const fullPath = `${basePath}/${filename}`;
+    const label = `${filename}`;
+    const description = `Created at ${createdDate}`;
+    let category;
+    if (icon === "default") {
+      category = "url";
+    } else if (icon === "media") {
+      category = "Video";
+    } else if (icon === "sound") {
+      category = "Podcast";
+    } else {
+      category = "Image";
+    }
+
+    return new File(fullPath, {
+      label,
+      icon: icon,
+      Category: category,
+      Created: createdDate,
+      description,
+      appProps: {
+        app: "ExternalLinkApp",
+        url,
       },
     });
   }
@@ -397,6 +427,68 @@ class Wrapper extends Component {
     files.push(this.createSingleVideoFile(videoHistoryPath, "Leona Vingativa - Eu quero um boy (Cover Gaby Amarantos)", "g2wOb7CTtxw", "2014/7/8 07:43"));
     files.push(this.createSingleVideoFile(videoHistoryPath, "Computer Love (2009 Remaster)", "uNBGWenPlGo", "2014/12/14 07:43"));
     files.push(this.createSingleVideoFile(videoHistoryPath, "Happy Birthday, Bitch! - Loiter Squad", "RwyKQ_j7Vew", "2014/9/4 07:43"));
+
+    //---------Folder Video--------------
+    const videoPath = "c:/My Documents/Video"
+    files.push(this.createLinkFile(videoPath, "media", "5ninthavenueproject", "https://www.youtube.com/@5ninthavenueproject", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "ActionKid", "https://www.youtube.com/@ActionKid", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Aetia", "https://www.youtube.com/@AetiaEditorial", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "ALEX AVILA", "http://youtube.com/@alexander_avila", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Amador e Jr. Segurança Patrimonial Ltda.", "https://www.youtube.com/@amadorejr", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Arquivo Transformista", "https://www.youtube.com/@arquivotransformista", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Bianca DellaFancy", "https://www.youtube.com/@BiancaDellaFancy", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Bienal de São Paulo", "https://www.youtube.com/@bienalsp", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Bliss Foster", "https://www.youtube.com/@BlissFoster", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Boiler Room", "https://www.youtube.com/@boilerroom", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Christian Dunker", "https://www.youtube.com/@chrisdunker", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "It's Nice That", "https://www.youtube.com/@itsnicethat", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Louisiana Channel", "https://www.youtube.com/@thelouisianachannel", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "NardwuarServiette", "https://www.youtube.com/@nardwuar", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Maria Homem", "https://www.youtube.com/@MariaHomem", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Opera Mundi", "https://www.youtube.com/@omundi", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Pausa Para o Fim do Mundo", "https://www.youtube.com/@PausaParaoFimdoMundo", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Podcast Tecnopolítica", "https://www.youtube.com/c/PodcastTecnopol%C3%ADtica", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Razão Inadequada", "https://www.youtube.com/@razaoinadequada", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "NORMOSENORMOSE", "https://www.youtube.com/@Normose_", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Resident Advisor", "https://www.youtube.com/@ResidentAdvisor", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Schizofia: Teoria e Filosofia Pós-Moderna", "https://www.youtube.com/@schizofia/videos", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Tempero Drag", "https://www.youtube.com/@TemperoDrag", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "ter.a.pia", "https://www.youtube.com/@historiasdeterapia", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Tese Onze", "https://www.youtube.com/@TeseOnze", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "The New Centre for Research & Practice", "https://www.youtube.com/@NewCentre", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Transe", "https://www.youtube.com/@Transe", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Casa do Saber", "https://www.youtube.com/@casadosaber", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "CLINICAND - PSICANÁLISE E ESQUIZOANÁLISE", "https://www.youtube.com/@CLINICAND", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Heribaldo Maia", "https://www.youtube.com/@heribaldomaia", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "ContraPoints", "https://www.youtube.com/@ContraPoints", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Jonas Čeika - CCK Philosophy", "https://www.youtube.com/@jonasceikaCCK", "2025/7/27 00:00"));
+
+    //---------Folder Podcast--------------
+    const podcastPath = "c:/My Documents/Podcast"
+    files.push(this.createLinkFile(podcastPath, "sound", "ARE WE ON AIR?", "https://open.spotify.com/show/3jkmlUkOfQqofQabtYhU4Q?si=06d15ffbf06d42ff", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Why'd You Push That Button?", "https://open.spotify.com/show/4xEBxMawkpToKdcnSTI7Ze?si=2b9676a633854281", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Rabbit Hole", "https://open.spotify.com/show/6dqqC8nkBTC3ldRs7pP4qn?si=602a1615ff73455a", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Reply All", "https://open.spotify.com/show/7gozmLqbcbr6PScMjc0Zl4?si=5dcd3b58a62b4401", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "vibes em análise", "https://open.spotify.com/show/42CNqtkx9yd1cIg0E6E9rL?si=27e9ba85c9684f2d", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "A Voz e o Silêncio de Clarice Lispector - 451MHz", "https://open.spotify.com/episode/6aKTtHY183mxfnHI0Uav8k?si=53d9922ed9224fd1", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "A liberdade segundo Caio Fernando de Abreu - 451MHz", "https://open.spotify.com/episode/2jB8sUhkyOMbhrrcw0MbJF?si=d14675807dea4b82", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Paulo Freire: vida de professor - 451MHz", "https://open.spotify.com/episode/5TGEzTL0iHOhef2kuUcdFc?si=1c9b0b855b444a66", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Os mistérios de Lygia Fagundes Telles - 451MHz", "https://open.spotify.com/episode/581Cc0eKpILFVhANub2ilb?si=5c0e702af5804ac0", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Rádio Escafandro", "https://open.spotify.com/show/2Jonxe5ibaFY0iw7Czyioj?si=3944b67b14e14c8c", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Imposturas Filosóficas - Razão Inadequada", "https://open.spotify.com/show/1p4VWJZ7QgcdrflSxXkHCl?si=36f5fa0261af4d19", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Acid Horizon", "https://open.spotify.com/show/043axYbwmbDTd0fsCKOIrv?si=ec5c38abe3fc4c91", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Ciência Suja", "https://open.spotify.com/show/2bJvbVxZblK6E2mKkI5zbw?si=3859b2721f8945a1", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Pauta Pública", "https://open.spotify.com/show/0XVW3LGHaH6UQXXgDgMn25?si=43058ccc53314726", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Philosophize This!", "https://open.spotify.com/show/2Shpxw7dPoxRJCdfFXTWLE?si=be21b473973d439d", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Podcast Tecnopolítica", "https://open.spotify.com/show/55uTHZA0rs7ue5ajEJN9wp?si=0a4666c5e61c4977", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "AmarElo - O filme invisível", "https://open.spotify.com/show/3tDur8V0wslvtOBskYdfHX?si=37b8bb38b66e458d", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Machinic Unconscious Happy Hour", "https://open.spotify.com/episode/3puqFFqCxDEd9NatsRTCGc?si=ecc9055b02964933", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Mano a Mano", "https://open.spotify.com/show/0GnKiYeK11476CfoQEYlEd?si=7e6f39481bb34666", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Petit Journal", "https://open.spotify.com/show/75MOMlaBaE9Smo2Vp87CO2?si=3140727255da479c", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "IRL: Online Life is Real Life", "https://open.spotify.com/show/0vT7LJMeVDxyQ2ZamHKu08?si=f0dfdba4dd3d4325", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Internet History Podcast", "https://open.spotify.com/show/1CVtF3J2Sr5ZGRyWj3SG8D?si=fc6d34214f2f4526", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Santíssima Trindade das Perucas", "https://open.spotify.com/show/3HswoChqEkJNTFl3bv6Y5p?si=16e4898ae3034335", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "AmarElo Prisma", "https://open.spotify.com/show/0xfztI0qN9g4CuTpgcq5WS?si=045216540ab14ad2", "2025/7/27 00:00"));
 
 
   }
