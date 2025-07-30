@@ -16,3 +16,10 @@ export const JsPaintApp = () => <Window src="https://jspaint.app/" />;
 JsPaintApp.story = {
   name: "JSPaint app",
 };
+
+export const Google = () => <Window src="https://www.google.com/" />;
+
+Google.story = {
+  name: "Google",
+};
+

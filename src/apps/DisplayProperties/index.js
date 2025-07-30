@@ -6,7 +6,7 @@ import TabBackground from "./TabBackground";
 const styles = {
   Center: { backgroundRepeat: "no-repeat", backgroundSize: "auto", backgroundPosition: "center" },
   Tile: { backgroundRepeat: "repeat", backgroundSize: "auto", backgroundPosition: "initial" },
-  Stretch: { backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" },
+  Stretch: { backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "right" },
 };
 
 const DEFAULT_WALLPAPER_PATH = new URL("./TabBackground/wallpapers/HR_Cover_01.png", import.meta.url).href;
@@ -37,7 +37,7 @@ export function updateVariables() {
   root.style.setProperty('--background-image', props['--background-image'] || `url('${DEFAULT_WALLPAPER_PATH}')`); // Usa la imagen por defecto
   root.style.setProperty('--background-repeat', props['--background-repeat'] || 'no-repeat');
   root.style.setProperty('--background-size', props['--background-size'] || 'cover');
-  root.style.setProperty('--background-position', props['--background-position'] || 'center');
+  root.style.setProperty('--background-position', props['--background-position'] || 'right');
 }
 
 

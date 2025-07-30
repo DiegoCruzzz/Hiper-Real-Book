@@ -32,6 +32,24 @@ export default {
       content: 'leia-me',
     }
   },
+  "Video Test 1": {
+    filename: "Video Test 1",
+    icon: "video",
+    appProps: {
+      app: "MediaPlayer",
+      mode: "renderCurrentlyPlaying",
+      videoId: "ZbZSe6N_BXs",
+      playlists: []
+    }
+  },
+  "WebView test": {
+    filename: "WebView test 1",
+    icon: "default",
+    appProps: {
+      app: "Webview",
+      videoId: "https://www.google.com/",
+    }
+  },
 
   // Error: {
   //   filename: "Error",

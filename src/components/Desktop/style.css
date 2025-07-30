@@ -9,7 +9,7 @@ body {
   background-image: var(--background-image);
   background-repeat: var(--background-repeat);
   background-size: var(--background-size);
-  background-position: center;
+  background-position: right;
   color: var(--color-primary-alt);
   padding: 0;
   margin: 0;

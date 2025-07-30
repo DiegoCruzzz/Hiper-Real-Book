@@ -133,13 +133,13 @@ class MediaPlayer extends Component {
             }
             class="ui95-mediaplayer__play"
           >
-            <img src={require("./assets/play.png")} alt="Play/Pause" />
+            <img src={new URL("./assets/play.png", import.meta.url).href} alt="Play/Pause" />
           </button>
           <button
             onClick={() => this.setState({ mode: "renderViewPlaylist" })}
             class="ui95-mediaplayer__stop"
           >
-            <img src={require("./assets/stop.png")} alt="Stop" />
+            <img src={new URL("./assets/stop.png", import.meta.url).href} alt="Stop" />
           </button>
         </div>
       </Window>

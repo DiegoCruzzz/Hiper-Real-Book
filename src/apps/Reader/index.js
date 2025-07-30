@@ -7,6 +7,7 @@ import "./reader.css";
 
 //------------Book Content--------------
 import {LeiaMe} from "../../content/leia-me";
+import {SingleImageReader} from "../../content/downloads";
 //-----------16---------------
 import {EsperancaMistica} from "../../content/16/esperanca-mistica";
 import {DoresDeTernura} from "../../content/16/dores-de-ternura";
@@ -108,7 +109,6 @@ const contentComponents = {
   "vinte-um": VinteUm,
   "vinte-dois": VinteDois,
 
-
 };
 
 function loadTwitter() {
@@ -165,10 +165,22 @@ class Reader extends Component {
     });
   }
 
-  render({ content, wmProps }) {
-    const ContentComponent =
-      typeof content === "string" ? contentComponents[content] : null;
+  render({ content, contentType, wmProps }) {
+    let RenderableContent = null;
 
+    if (typeof content === "string") {
+      if (contentType === "download") {
+        RenderableContent = <SingleImageReader imageName={content} />;
+      } else {
+        const ComponentDefinition = contentComponents[content];
+        if (ComponentDefinition) {
+          RenderableContent = <ComponentDefinition />;
+        } else {
+          console.warn(`Component definition not found for content: ${content}`);
+          RenderableContent = <p>⚠️ Conteúdo não encontrado</p>;
+        }
+      }
+    }
     return (
       <Window
         icon="wordpad"
@@ -180,13 +192,7 @@ class Reader extends Component {
         <Share />
         <ScrollableContainer ref={(el) => (this.scrollable = el)}>
           <article className="ui95__reader-wrap" ref={(el) => (this.el = el)}>
-            {ContentComponent ? (
-              <ContentComponent />
-            ) : (
-              <p>
-                <b>⚠️ Conteúdo não encontrado:</b> <code>{content}</code>
-              </p>
-            )}
+              {RenderableContent}
           </article>
         </ScrollableContainer>
       </Window>
