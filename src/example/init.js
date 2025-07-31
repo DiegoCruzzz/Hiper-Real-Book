@@ -112,7 +112,7 @@ class Wrapper extends Component {
     const description = `Created at ${createdDate}`;
     let category;
     if (icon === "default") {
-      category = "url";
+      category = "URL";
     } else if (icon === "media") {
       category = "Video";
     } else if (icon === "sound") {
@@ -331,12 +331,12 @@ class Wrapper extends Component {
     files.push(this.createDownloadFile(downloadPath, "gloria_maria_rihanna_montanha_anti", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_anotado", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_artista_vdd", "jpg", "2025/7/27 00:00", "Image", "download"));
-    files.push(this.createDownloadFile(downloadPath, "gretchen_dançando", "gif", "2025/7/27 00:00", "Image", "download"));
+    files.push(this.createDownloadFile(downloadPath, "gretchen_dancando", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_faca", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_fatos", "jpeg", "2025/7/27 00:00", "Image", "download")); // Corregida la extensión
     files.push(this.createDownloadFile(downloadPath, "gretchen_hj_em_dia", "webp", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_o_que", "gif", "2025/7/27 00:00", "Image", "download"));
-    files.push(this.createDownloadFile(downloadPath, "gretchen_parabéns", "gif", "2025/7/27 00:00", "Image", "download"));
+    files.push(this.createDownloadFile(downloadPath, "gretchen_parabens", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_paris", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "gretchen_telefone", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "hubert", "png", "2025/7/27 00:00", "Image", "download"));
@@ -370,15 +370,15 @@ class Wrapper extends Component {
     files.push(this.createDownloadFile(downloadPath, "skyferreira_fev_marc", "jpg", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "ta_no_face", "webp", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "talento_charts_gretchen", "jpeg", "2025/7/27 00:00", "Image", "download"));
-    files.push(this.createDownloadFile(downloadPath, "talvez_venha_aí", "jpg", "2025/7/27 00:00", "Image", "download")); // Corregido el nombre
+    files.push(this.createDownloadFile(downloadPath, "talvez_venha_ai", "jpg", "2025/7/27 00:00", "Image", "download")); // Corregido el nombre
     files.push(this.createDownloadFile(downloadPath, "the_good_days_bitch_raising_her_glass", "jpg", "2025/7/27 00:00", "Image", "download")); // Corregido el nombre
     files.push(this.createDownloadFile(downloadPath, "tiffany_crying_car", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "topico_bobo", "jpg", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "tulla_chorando_celular", "webp", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "tulla_confetti", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "tulla_luana_batendo", "gif", "2025/7/27 00:00", "Image", "download"));
-    files.push(this.createDownloadFile(downloadPath, "tulla_saúde", "gif", "2025/7/27 00:00", "Image", "download"));
-    files.push(this.createDownloadFile(downloadPath, "urach_dançando", "gif", "2025/7/27 00:00", "Image", "download"));
+    files.push(this.createDownloadFile(downloadPath, "tulla_saude", "gif", "2025/7/27 00:00", "Image", "download"));
+    files.push(this.createDownloadFile(downloadPath, "urach_dancando", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "urach_mistica", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "urach_moonwalk", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "urach_nuances", "jpeg", "2025/7/27 00:00", "Image", "download"));
@@ -427,6 +427,48 @@ class Wrapper extends Component {
     files.push(this.createSingleVideoFile(videoHistoryPath, "Leona Vingativa - Eu quero um boy (Cover Gaby Amarantos)", "g2wOb7CTtxw", "2014/7/8 07:43"));
     files.push(this.createSingleVideoFile(videoHistoryPath, "Computer Love (2009 Remaster)", "uNBGWenPlGo", "2014/12/14 07:43"));
     files.push(this.createSingleVideoFile(videoHistoryPath, "Happy Birthday, Bitch! - Loiter Squad", "RwyKQ_j7Vew", "2014/9/4 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Google", "https://www.google.com", "1998/9/4 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Aeon Flux - Chronophasia", "https://vimeo.com/138332818", "2000/1/1 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "frank ocean tumblr", "https://frankocean.tumblr.com/post/26473798723", "2012/11/17 12:20"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "MSN morre dia 15 de março, para dar lugar ao Skype", "https://exame.com/tecnologia/msn-sera-encerrado-oficialmente-dia-15-de-marco/", "2013/1/9 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Teenage Bedrooms on Screen", "https://teenagebedroomsonscreen.com/", "2013/3/1 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "the camera in the mirror", "https://the-camera-in-the-mirror.tumblr.com/", "2013/6/6 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Orkut", "http://orkut.com", "2014/9/30 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "A New Kind of Social Anxiety in the Classroom", "https://www.theatlantic.com/education/archive/2015/01/the-socially-anxious-generation/384458/", "2015/8/16 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "deep breath anxiety gif", "https://www.google.com/search?q=deep+breath+anxiety+gif&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjWsuug2cjmAhUTELkGHVeAC6wQ_AUoAXoECAsQAw&biw=1366&bih=635", "2015/8/16 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Watch Kanye West's Yeezy Season 3 Livestream Here", "https://www.complex.com/sneakers/a/brendan-dunne/yeezy-season-3-stream-kanye-west", "2016/2/11 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Boys Don’t Cry", "https://boysdontcry.co/", "2016/8/20 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "truisms", "https://truisms.space/", "2016/8/20 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "What Rave Culture Is Teaching Modern Graphic Designers", "https://eyeondesign.aiga.org/what-rave-culture-is-teaching-modern-graphic-designers/", "2016/8/24 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "k-punk", "https://k-punk.org/", "2017/1/7 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "World Premiere: Ren Hang’s Journal of Depression", "https://web.archive.org/web/20170313071337/http://www.thechronicle.ro/arts-culture/world-premiere-ren-hangs-journal-of-depression/", "2017/2/24 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Simulacros e Simulações", "https://monoskop.org/images/c/c4/Baudrillard_Jean_Simulacros_e_simula%C3%A7%C3%A3o_1991.pdf", "2017/7/3 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Frank Ocean @Northside", "https://www.pscp.tv/w/1ypKdrmwbqYJW", "2017/6/9 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "8bitrama", "https://vimeo.com/32740755", "2017/12/1 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "The Politics of Design - Ruben Pater", "https://issuu.com/bis_publishers/docs/the_politics_of_design", "2018/3/17 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "How Trump Consultants Exploited the Facebook Data of Millions - The New York Times", "https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html", "2018/3/17 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "pandora’s vox: on community in cyberspace", "https://gist.github.com/kolber/2131643", "2018/3/17 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Kanye West - YE Listening Party at Wyoming", "http://wav.media/s/5YkTNMzR", "2018/5/31 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "A poesia é traduzível?", "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-40142012000300002", "2018/6/9 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "IRL: Online Life is Real Life", "https://open.spotify.com/show/0vT7LJMeVDxyQ2ZamHKu08", "2018/9/4 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power", "https://eddierockerz.com/wp-content/uploads/2020/11/the-age-of-surveillance-capitalism-the-fight-for-a-human-future-at-the-new-frontier-of-power-pdfdrive-.pdf", "2018/10/1 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Why'd You Push That Button?", "https://open.spotify.com/show/4xEBxMawkpToKdcnSTI7Ze?si=150f34e5a60b44d8", "2018/12/1 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "First Image of a Black Hole - NASA Science", "https://science.nasa.gov/resource/first-image-of-a-black-hole/", "2019/4/10 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Facebook is a growing and unstoppable digital graveyard", "https://www.bbc.com/future/article/20160313-the-unstoppable-rise-of-the-facebook-dead", "2019/4/27 06:46"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Paulo Freire - Pedagogia da Esperança", "https://construindoumaprendizado.wordpress.com/wp-content/uploads/2012/12/paulo-freire-pedagogia-da-esperanc3a7a-desbloqueado.pdf", "2019/6/26 20:30"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "3: Quem tem medo de Criança Viada? by Santíssima Trindade das Perucas", "https://open.spotify.com/episode/5wtuqGyAf71p5jdWLBVqiR?si=KdefJipUTAu435ddYvnBWw", "2019/9/14 19:30"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "So the internet didn’t turn out the way we hoped. Where do we go from here?", "https://www.nytimes.com/interactive/2019/11/14/magazine/internet-future-dream.html", "2019/11/13 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Aeon Flux 1995 S03E04 A Last Time for Everything", "https://www.dailymotion.com/video/x6ijh4h", "2019/11/17 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "ANDRE 3000 AND RICK RUBIN IN CONVERSATION", "https://brokenrecordpodcast.com/episode-13-andre-3000-and-rick-rubin-in-conversation", "2019/12/24 16:51"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "https://www.youtube.com/watch?v=ITu1QqH0a7w", "2019/12/24 16:51"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Alexander Leon on X: \"Queer people don't grow up as ourselves...\"", "https://x.com/alexand_erleon/status/1214459404575100928?lang=en", "2020/1/7 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Rabbit Hole by The New York Times", "https://open.spotify.com/show/6dqqC8nkBTC3ldRs7pP4qn?si=DllQCtk-QAGyC6ysqmh3NA", "2020/4/23 07:43"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Quem tem medo do cancelamento?", "https://gamarevista.com.br/semana/ta-com-medo/o-medo-da-cultura-do-cancelamento/", "2020/7/26 20:54"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Chi Chi DeVayne & Thorgy Thor LSFYL | And I Am Telling You I'm Not Going - Jennifer Holliday", "https://www.facebook.com/logo/videos/chi-chi-devayne-thorgy-thor-lsfyl-and-i-am-telling-you-im-not-going-jennifer-hol/2753230954896979/", "2020/8/20 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Podcast Tecnopolítica", "https://www.youtube.com/c/PodcastTecnopol%C3%ADtica", "2020/9/3 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "TODAY'S NUMBER IS... 9/4/20", "https://www.youtube.com/watch?v=tvJXEj6PmiA", "2020/9/4 00:00"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Underground Resistance - Transition", "https://soundcloud.com/undergroundresistance/underground-resistance-transition", "2020/11/17 13:56"));
+    files.push(this.createLinkFile(videoHistoryPath, "default", "Kanye West Presents: a DONDA Listening Event", "https://music.apple.com/us/station/kanye-west-presents-a-donda-listening-event/ra.1577426343", "2021/7/22 22:00"));
 
     //---------Folder Video--------------
     const videoPath = "c:/My Documents/Video"
@@ -462,6 +504,15 @@ class Wrapper extends Component {
     files.push(this.createLinkFile(videoPath, "media", "Heribaldo Maia", "https://www.youtube.com/@heribaldomaia", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "ContraPoints", "https://www.youtube.com/@ContraPoints", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "Jonas Čeika - CCK Philosophy", "https://www.youtube.com/@jonasceikaCCK", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "First Image of a Black Hole - NASA Science", "https://science.nasa.gov/resource/first-image-of-a-black-hole/", "2019/4/10 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Facebook is a growing and unstoppable digital graveyard", "https://www.bbc.com/future/article/20160313-the-unstoppable-rise-of-the-facebook-dead", "2019/4/27 06:46"));
+    files.push(this.createLinkFile(videoPath, "media", "Paulo Freire - Pedagogia da Esperança", "https://construindoumaprendizado.wordpress.com/wp-content/uploads/2012/12/paulo-freire-pedagogia-da-esperanc3a7a-desbloqueado.pdf", "2019/6/26 20:30"));
+    files.push(this.createLinkFile(videoPath, "media", "3: Quem tem medo de Criança Viada? by Santíssima Trindade das Perucas", "https://open.spotify.com/episode/5wtuqGyAf71p5jdWLBVqiR?si=KdefJipUTAu435ddYvnBWw", "2019/9/14 19:30"));
+    files.push(this.createLinkFile(videoPath, "media", "So the internet didn’t turn out the way we hoped. Where do we go from here?", "https://www.nytimes.com/interactive/2019/11/14/magazine/internet-future-dream.html", "2019/11/13 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "Aeon Flux 1995 S03E04 A Last Time for Everything", "https://www.dailymotion.com/video/x6ijh4h", "2019/11/17 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "ANDRE 3000 AND RICK RUBIN IN CONVERSATION", "https://brokenrecordpodcast.com/episode-13-andre-3000-and-rick-rubin-in-conversation", "2019/12/24 16:51"));
+    files.push(this.createLinkFile(videoPath, "media", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "https://www.youtube.com/watch?v=ITu1QqH0a7w", "2019/12/24 16:51"));
+
 
     //---------Folder Podcast--------------
     const podcastPath = "c:/My Documents/Podcast"

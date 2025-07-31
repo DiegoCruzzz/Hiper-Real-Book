@@ -15,12 +15,12 @@ const downloadImages = [
   new URL("../img/download/gloria_maria_rihanna_montanha_anti.gif", import.meta.url).href,
   new URL("../img/download/gretchen_anotado.gif", import.meta.url).href,
   new URL("../img/download/gretchen_artista_vdd.jpg", import.meta.url).href,
-  new URL("../img/download/gretchen_dançando.gif", import.meta.url).href,
+  new URL("../img/download/gretchen_dancando.gif", import.meta.url).href,
   new URL("../img/download/gretchen_faca.gif", import.meta.url).href,
   new URL("../img/download/gretchen_fatos.jpeg", import.meta.url).href,
   new URL("../img/download/gretchen_hj_em_dia.webp", import.meta.url).href,
   new URL("../img/download/gretchen_o_que.gif", import.meta.url).href,
-  new URL("../img/download/gretchen_parabéns.gif", import.meta.url).href,
+  new URL("../img/download/gretchen_parabens.gif", import.meta.url).href,
   new URL("../img/download/gretchen_paris.gif", import.meta.url).href,
   new URL("../img/download/gretchen_telefone.gif", import.meta.url).href,
   new URL("../img/download/hubert.png", import.meta.url).href,
@@ -54,15 +54,15 @@ const downloadImages = [
   new URL("../img/download/skyferreira_fev_marc.jpg", import.meta.url).href,
   new URL("../img/download/ta_no_face.webp", import.meta.url).href,
   new URL("../img/download/talento_charts_gretchen.jpeg", import.meta.url).href,
-  new URL("../img/download/talvez_venha_aí.jpg", import.meta.url).href,
-  new URL("../img/download/the good days bitch raising her glass.jpg", import.meta.url).href,
+  new URL("../img/download/talvez_venha_ai.jpg", import.meta.url).href,
+  new URL("../img/download/the_good_days_bitch_raising_her_glass.jpg", import.meta.url).href,
   new URL("../img/download/tiffany_crying_car.gif", import.meta.url).href,
   new URL("../img/download/topico_bobo.jpg", import.meta.url).href,
   new URL("../img/download/tulla_chorando_celular.webp", import.meta.url).href,
   new URL("../img/download/tulla_confetti.gif", import.meta.url).href,
   new URL("../img/download/tulla_luana_batendo.gif", import.meta.url).href,
-  new URL("../img/download/tulla_saúde.gif", import.meta.url).href,
-  new URL("../img/download/urach_dançando.gif", import.meta.url).href,
+  new URL("../img/download/tulla_saude.gif", import.meta.url).href,
+  new URL("../img/download/urach_dancando.gif", import.meta.url).href,
   new URL("../img/download/urach_mistica.gif", import.meta.url).href,
   new URL("../img/download/urach_moonwalk.gif", import.meta.url).href,
   new URL("../img/download/urach_nuances.jpeg", import.meta.url).href,
@@ -82,7 +82,6 @@ export function SingleImageReader({ imageName }) {
     return <p>⚠️ Imagen não encontrada</p>;
   }
 
-  console.log("Imagen bien aca bien abrdia",imageUrl);
   return (
     <div className="ui95__reader-page" style={{maxWidth: '85%', padding: '0'}}>
       <img
@@ -91,7 +90,6 @@ export function SingleImageReader({ imageName }) {
         style={{
           width: "100%",
           display: "block",
-          marginBottom: "1em",
         }}
       />
     </div>
