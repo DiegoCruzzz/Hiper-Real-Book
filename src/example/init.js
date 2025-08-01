@@ -15,6 +15,7 @@ import Talks from "../apps/Talks/";
 import TabDialog from "../apps/TabDialog/";
 import DisplayProperties from "../apps/DisplayProperties/";
 import ExternalLinkApp from "../apps/ExternalLink";
+import Contact from "../apps/Contact/";
 import startMenu from "./data-start";
 import desktopIcons from "./data-desktop-icons";
 const site = { title: "Example ui95 app" };
@@ -43,6 +44,7 @@ const apps = {
   ExternalLinkApp,
   Talks,
   Loader,
+  Contact,
 };
 
 class Wrapper extends Component {
@@ -163,12 +165,12 @@ class Wrapper extends Component {
     const files = this.state.fs.files;
     files.push(
       new File("a:", {
-        label: "3½ Floppy (A:)",
+        label: "The Wired",
         appProps: {
           app: "Alert",
           icon: "info",
-          title: "A:",
-          text: "There is no disk in this drive or the drive door is open. Insert a disk in the drive and make sure the drive door is closed, and then click Retry.",
+          title: "The Wired",
+          text: " “When the real is no longer what it was, nostalgia assumes its full meaning.” — J.B.",
           width: 400,
           height: 248,
           buttons: [{ text: "Retry" }, { text: "Cancel" }],
@@ -389,86 +391,85 @@ class Wrapper extends Component {
     files.push(this.createDownloadFile(downloadPath, "ygona_olhos_do_pai", "jpg", "2025/7/27 00:00", "Image", "download"));
 
     //---------Folder History--------------
-    const videoHistoryPath = "c:/My Documents/Download/History"
-    files.push(this.createSingleVideoFile(videoHistoryPath, "TLC - FanMail - 14. Communicate (Interlude)", "w7RJDe7t7mk", "2021/11/16 17:28"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Ney Matogrosso - Poema", "QyB6xSt52AQ", "2021/7/22 22:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "AmarElo - É Tudo Pra Ontem | Trailer oficial | Netflix", "FQ9hCN0ZYSg", "2020/12/8 00:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "The Moral Responsibility of the Artist", "PlnDbqLNv-M", "2021/5/13 07:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Give yourself permission to be creative | Ethan Hawke", "WRS9Gek4V5Q", "2020/10/15 07:20"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Favorite Scene from one of The Twilight Zone episodes", "QUn2BNydxIY", "2020/5/13 05:39"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "HAVERÁ ARTE DEPOIS DO CORONAVÍRUS?", "kUP1Qv8w4V4", "2020/3/31 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Rick Rubin & Andre 3000 Talk Andre's Current Struggle With Creation on Broken Record Podcast", "g2ZLxtqJuKE", "2019/12/24 16:51"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Johnny Castaway (Screensaver) (Sierra On-Line) [Christmas Special] [8 hours]", "-_Hn-wfX25g", "2019/12/25 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "John Waters Commencement - RISD 2015", "Hl05XGifKb4", "2019/12/9 19:20"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "This Is Water David Foster Wallace Commencement Speech", "DCbGM4mqEVw", "2019/12/9 19:20"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Saint Etienne - Everything Flows", "A_YiWO0KO7M", "2019/10/19 00:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Gonzanguinha Pequena Memória para um tempo sem memória", "_8kbEccj33c", "2018/10/28 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Listen To Martian Wind Through NASA Insight Lander’s Sensors", "1PtdjFnY64M", "2019/2/17 13:51"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "FKA twigs - Cellophane", "YkLjqFpBh84", "2019/4/24 00:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "RuPaul teaches Nelson how to be a Drag Queen", "nqx8xOimNYo", "2016/3/16 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Prince The Artist giving advice about Internet", "Iy7i9ru7HB8", "2016/4/21 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Atlanta Transracial", "x85u_9Qlh1U", "2016/10/12 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Mark Fisher - Cybertime Crisis", "zOQgCg73sfQ", "2017/1/7 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Andrei Tarkovsky on the purpose of art and spirituality", "d7qZFe7elAQ", "2017/4/4 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Before Sunrise - Get off the train scene", "DQ8Q6VuyB74", "2017/3/10 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Back to the Future Part 2 Movie CLIP - Hill Valley, 2015 (1989) HD", "d68yRIE9OvQ", "2015/10/21 16:29"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "I Know It's Over (2011 Remaster)", "iey0VOhxV2Y", "2015/11/17 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Daria's Graduation Speech", "PdG9pBtP9D4", "2015/12/17 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "David Bowie predicted in 1999 the impact of the Internet in BBC interview", "LaHcOs7mhfU", "2016/1/10 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Spike Lee & Pharrell Williams on Hard Work & Opportunity | ARTST TLK™ Ep. 9 Part 2 |Reserve Channel", "_aHpxr4Cw6o", "2016/2/2 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Virgo - Free Yourself", "j5NDni1aSXI", "1998/9/4 00:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "mscl S1 E19 ending", "94YXaLKM3Ig", "2012/12/7 12:20"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "POW! We took care of the time travel paradox!", "Qi7egXgYcgk", "2012/12/21 00:00"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Peppa La Beijja", "hJuld3FYy1I", "2013/3/10 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "The Message by M.I.A. | Interscope", "Sa8hXJowm_M", "2013/6/6 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "First computer to sing - Daisy Bell", "41U78QP8nBk", "2013/11/17 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "No Direction Home [reading a store sign scene]", "rBP9QKwW19Y", "2014/2/28 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Live To Tell /Oh Father - Madonna Blond Ambition Japan Tour '90", "tb2hyuEvQHs", "2014/6/4 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Leona Vingativa - Eu quero um boy (Cover Gaby Amarantos)", "g2wOb7CTtxw", "2014/7/8 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Computer Love (2009 Remaster)", "uNBGWenPlGo", "2014/12/14 07:43"));
-    files.push(this.createSingleVideoFile(videoHistoryPath, "Happy Birthday, Bitch! - Loiter Squad", "RwyKQ_j7Vew", "2014/9/4 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Google", "https://www.google.com", "1998/9/4 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Aeon Flux - Chronophasia", "https://vimeo.com/138332818", "2000/1/1 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "frank ocean tumblr", "https://frankocean.tumblr.com/post/26473798723", "2012/11/17 12:20"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "MSN morre dia 15 de março, para dar lugar ao Skype", "https://exame.com/tecnologia/msn-sera-encerrado-oficialmente-dia-15-de-marco/", "2013/1/9 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Teenage Bedrooms on Screen", "https://teenagebedroomsonscreen.com/", "2013/3/1 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "the camera in the mirror", "https://the-camera-in-the-mirror.tumblr.com/", "2013/6/6 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Orkut", "http://orkut.com", "2014/9/30 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "A New Kind of Social Anxiety in the Classroom", "https://www.theatlantic.com/education/archive/2015/01/the-socially-anxious-generation/384458/", "2015/8/16 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "deep breath anxiety gif", "https://www.google.com/search?q=deep+breath+anxiety+gif&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjWsuug2cjmAhUTELkGHVeAC6wQ_AUoAXoECAsQAw&biw=1366&bih=635", "2015/8/16 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Watch Kanye West's Yeezy Season 3 Livestream Here", "https://www.complex.com/sneakers/a/brendan-dunne/yeezy-season-3-stream-kanye-west", "2016/2/11 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Boys Don’t Cry", "https://boysdontcry.co/", "2016/8/20 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "truisms", "https://truisms.space/", "2016/8/20 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "What Rave Culture Is Teaching Modern Graphic Designers", "https://eyeondesign.aiga.org/what-rave-culture-is-teaching-modern-graphic-designers/", "2016/8/24 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "k-punk", "https://k-punk.org/", "2017/1/7 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "World Premiere: Ren Hang’s Journal of Depression", "https://web.archive.org/web/20170313071337/http://www.thechronicle.ro/arts-culture/world-premiere-ren-hangs-journal-of-depression/", "2017/2/24 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Simulacros e Simulações", "https://monoskop.org/images/c/c4/Baudrillard_Jean_Simulacros_e_simula%C3%A7%C3%A3o_1991.pdf", "2017/7/3 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Frank Ocean @Northside", "https://www.pscp.tv/w/1ypKdrmwbqYJW", "2017/6/9 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "8bitrama", "https://vimeo.com/32740755", "2017/12/1 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "The Politics of Design - Ruben Pater", "https://issuu.com/bis_publishers/docs/the_politics_of_design", "2018/3/17 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "How Trump Consultants Exploited the Facebook Data of Millions - The New York Times", "https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html", "2018/3/17 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "pandora’s vox: on community in cyberspace", "https://gist.github.com/kolber/2131643", "2018/3/17 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Kanye West - YE Listening Party at Wyoming", "http://wav.media/s/5YkTNMzR", "2018/5/31 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "A poesia é traduzível?", "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-40142012000300002", "2018/6/9 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "IRL: Online Life is Real Life", "https://open.spotify.com/show/0vT7LJMeVDxyQ2ZamHKu08", "2018/9/4 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power", "https://eddierockerz.com/wp-content/uploads/2020/11/the-age-of-surveillance-capitalism-the-fight-for-a-human-future-at-the-new-frontier-of-power-pdfdrive-.pdf", "2018/10/1 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Why'd You Push That Button?", "https://open.spotify.com/show/4xEBxMawkpToKdcnSTI7Ze?si=150f34e5a60b44d8", "2018/12/1 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "First Image of a Black Hole - NASA Science", "https://science.nasa.gov/resource/first-image-of-a-black-hole/", "2019/4/10 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Facebook is a growing and unstoppable digital graveyard", "https://www.bbc.com/future/article/20160313-the-unstoppable-rise-of-the-facebook-dead", "2019/4/27 06:46"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Paulo Freire - Pedagogia da Esperança", "https://construindoumaprendizado.wordpress.com/wp-content/uploads/2012/12/paulo-freire-pedagogia-da-esperanc3a7a-desbloqueado.pdf", "2019/6/26 20:30"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "3: Quem tem medo de Criança Viada? by Santíssima Trindade das Perucas", "https://open.spotify.com/episode/5wtuqGyAf71p5jdWLBVqiR?si=KdefJipUTAu435ddYvnBWw", "2019/9/14 19:30"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "So the internet didn’t turn out the way we hoped. Where do we go from here?", "https://www.nytimes.com/interactive/2019/11/14/magazine/internet-future-dream.html", "2019/11/13 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Aeon Flux 1995 S03E04 A Last Time for Everything", "https://www.dailymotion.com/video/x6ijh4h", "2019/11/17 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "ANDRE 3000 AND RICK RUBIN IN CONVERSATION", "https://brokenrecordpodcast.com/episode-13-andre-3000-and-rick-rubin-in-conversation", "2019/12/24 16:51"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "https://www.youtube.com/watch?v=ITu1QqH0a7w", "2019/12/24 16:51"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Alexander Leon on X: \"Queer people don't grow up as ourselves...\"", "https://x.com/alexand_erleon/status/1214459404575100928?lang=en", "2020/1/7 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Rabbit Hole by The New York Times", "https://open.spotify.com/show/6dqqC8nkBTC3ldRs7pP4qn?si=DllQCtk-QAGyC6ysqmh3NA", "2020/4/23 07:43"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Quem tem medo do cancelamento?", "https://gamarevista.com.br/semana/ta-com-medo/o-medo-da-cultura-do-cancelamento/", "2020/7/26 20:54"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Chi Chi DeVayne & Thorgy Thor LSFYL | And I Am Telling You I'm Not Going - Jennifer Holliday", "https://www.facebook.com/logo/videos/chi-chi-devayne-thorgy-thor-lsfyl-and-i-am-telling-you-im-not-going-jennifer-hol/2753230954896979/", "2020/8/20 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Podcast Tecnopolítica", "https://www.youtube.com/c/PodcastTecnopol%C3%ADtica", "2020/9/3 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "TODAY'S NUMBER IS... 9/4/20", "https://www.youtube.com/watch?v=tvJXEj6PmiA", "2020/9/4 00:00"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Underground Resistance - Transition", "https://soundcloud.com/undergroundresistance/underground-resistance-transition", "2020/11/17 13:56"));
-    files.push(this.createLinkFile(videoHistoryPath, "default", "Kanye West Presents: a DONDA Listening Event", "https://music.apple.com/us/station/kanye-west-presents-a-donda-listening-event/ra.1577426343", "2021/7/22 22:00"));
+    const downloadHistoryPath = "c:/My Documents/Download/History"
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "TLC - FanMail - 14. Communicate (Interlude)", "w7RJDe7t7mk", "2021/11/16 17:28"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Ney Matogrosso - Poema", "QyB6xSt52AQ", "2021/10/12 2:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "AmarElo - É Tudo Pra Ontem | Trailer oficial | Netflix", "FQ9hCN0ZYSg", "2020/12/8 00:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "The Moral Responsibility of the Artist", "PlnDbqLNv-M", "2021/5/13 07:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Give yourself permission to be creative | Ethan Hawke", "WRS9Gek4V5Q", "2020/10/15 07:20"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Favorite Scene from one of The Twilight Zone episodes", "QUn2BNydxIY", "2020/5/13 05:39"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "HAVERÁ ARTE DEPOIS DO CORONAVÍRUS?", "kUP1Qv8w4V4", "2020/3/31 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Rick Rubin & Andre 3000 Talk Andre's Current Struggle With Creation on Broken Record Podcast", "-_Hn-wfX25g", "2019/12/24 16:51"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Johnny Castaway (Screensaver) (Sierra On-Line) [Christmas Special] [8 hours]", "g2ZLxtqJuKE", "2019/12/25 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "John Waters Commencement - RISD 2015", "Hl05XGifKb4", "2019/12/9 19:20"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "This Is Water David Foster Wallace Commencement Speech", "DCbGM4mqEVw", "2019/12/9 19:20"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Saint Etienne - Everything Flows", "A_YiWO0KO7M", "2019/10/19 00:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Gonzanguinha Pequena Memória para um tempo sem memória", "_8kbEccj33c", "2018/10/28 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Listen To Martian Wind Through NASA Insight Lander’s Sensors", "1PtdjFnY64M", "2019/2/17 13:51"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "FKA twigs - Cellophane", "YkLjqFpBh84", "2019/4/24 00:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "RuPaul teaches Nelson how to be a Drag Queen", "nqx8xOimNYo", "2016/3/16 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Prince The Artist giving advice about Internet", "Iy7i9ru7HB8", "2016/4/21 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Atlanta Transracial", "x85u_9Qlh1U", "2016/10/12 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Mark Fisher - Cybertime Crisis", "zOQgCg73sfQ", "2017/1/7 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Andrei Tarkovsky on the purpose of art and spirituality", "d7qZFe7elAQ", "2017/4/4 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Before Sunrise - Get off the train scene", "DQ8Q6VuyB74", "2017/3/10 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Back to the Future Part 2 Movie CLIP - Hill Valley, 2015 (1989) HD", "d68yRIE9OvQ", "2015/10/21 16:29"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "I Know It's Over (2011 Remaster)", "iey0VOhxV2Y", "2015/11/17 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Daria's Graduation Speech", "PdG9pBtP9D4", "2015/12/17 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "David Bowie predicted in 1999 the impact of the Internet in BBC interview", "LaHcOs7mhfU", "2016/1/10 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Spike Lee & Pharrell Williams on Hard Work & Opportunity | ARTST TLK™ Ep. 9 Part 2 |Reserve Channel", "_aHpxr4Cw6o", "2016/2/2 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Virgo - Free Yourself", "j5NDni1aSXI", "1998/9/4 00:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "mscl S1 E19 ending", "94YXaLKM3Ig", "2012/12/7 12:20"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "POW! We took care of the time travel paradox!", "Qi7egXgYcgk", "2012/12/21 00:00"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Peppa La Beijja", "hJuld3FYy1I", "2013/3/10 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "The Message by M.I.A. | Interscope", "Sa8hXJowm_M", "2013/6/6 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "First computer to sing - Daisy Bell", "41U78QP8nBk", "2013/11/17 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "No Direction Home [reading a store sign scene]", "rBP9QKwW19Y", "2014/2/28 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Live To Tell /Oh Father - Madonna Blond Ambition Japan Tour '90", "tb2hyuEvQHs", "2014/6/4 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Leona Vingativa - Eu quero um boy (Cover Gaby Amarantos)", "g2wOb7CTtxw", "2014/7/8 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Computer Love (2009 Remaster)", "uNBGWenPlGo", "2014/12/14 07:43"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "Happy Birthday, Bitch! - Loiter Squad", "RwyKQ_j7Vew", "2014/9/4 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Google", "https://www.google.com", "1998/9/4 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Aeon Flux - Chronophasia", "https://vimeo.com/138332818", "2000/1/1 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "frank ocean tumblr", "https://frankocean.tumblr.com/post/26473798723", "2012/11/17 12:20"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "MSN morre dia 15 de março, para dar lugar ao Skype", "https://exame.com/tecnologia/msn-sera-encerrado-oficialmente-dia-15-de-marco/", "2013/1/9 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Teenage Bedrooms on Screen", "https://teenagebedroomsonscreen.com/", "2013/3/1 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "the camera in the mirror", "https://the-camera-in-the-mirror.tumblr.com/", "2013/6/6 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Orkut", "http://orkut.com", "2014/9/30 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "A New Kind of Social Anxiety in the Classroom", "https://www.theatlantic.com/education/archive/2015/01/the-socially-anxious-generation/384458/", "2015/8/16 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "deep breath anxiety gif", "https://www.google.com/search?q=deep+breath+anxiety+gif&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjWsuug2cjmAhUTELkGHVeAC6wQ_AUoAXoECAsQAw&biw=1366&bih=635", "2015/8/16 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Watch Kanye West's Yeezy Season 3 Livestream Here", "https://www.complex.com/sneakers/a/brendan-dunne/yeezy-season-3-stream-kanye-west", "2016/2/11 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Boys Don’t Cry", "https://boysdontcry.co/", "2016/8/20 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "truisms", "https://truisms.space/", "2016/8/20 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "What Rave Culture Is Teaching Modern Graphic Designers", "https://eyeondesign.aiga.org/what-rave-culture-is-teaching-modern-graphic-designers/", "2016/8/24 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "k-punk", "https://k-punk.org/", "2017/1/7 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "World Premiere: Ren Hang’s Journal of Depression", "https://web.archive.org/web/20170313071337/http://www.thechronicle.ro/arts-culture/world-premiere-ren-hangs-journal-of-depression/", "2017/2/24 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Simulacros e Simulações", "https://monoskop.org/images/c/c4/Baudrillard_Jean_Simulacros_e_simula%C3%A7%C3%A3o_1991.pdf", "2017/7/3 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Frank Ocean @Northside", "https://www.pscp.tv/w/1ypKdrmwbqYJW", "2017/6/9 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "8bitrama", "https://vimeo.com/32740755", "2017/12/1 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "The Politics of Design - Ruben Pater", "https://issuu.com/bis_publishers/docs/the_politics_of_design", "2018/3/17 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "How Trump Consultants Exploited the Facebook Data of Millions - The New York Times", "https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html", "2018/3/17 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "pandora’s vox: on community in cyberspace", "https://gist.github.com/kolber/2131643", "2018/3/17 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Kanye West - YE Listening Party at Wyoming", "http://wav.media/s/5YkTNMzR", "2018/5/31 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "A poesia é traduzível?", "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-40142012000300002", "2018/6/9 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "IRL: Online Life is Real Life", "https://open.spotify.com/show/0vT7LJMeVDxyQ2ZamHKu08", "2018/9/4 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power", "https://eddierockerz.com/wp-content/uploads/2020/11/the-age-of-surveillance-capitalism-the-fight-for-a-human-future-at-the-new-frontier-of-power-pdfdrive-.pdf", "2018/10/1 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Why'd You Push That Button?", "https://open.spotify.com/show/4xEBxMawkpToKdcnSTI7Ze?si=150f34e5a60b44d8", "2018/12/1 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Alexander Leon on X: \"Queer people don't grow up as ourselves...\"", "https://x.com/alexand_erleon/status/1214459404575100928?lang=en", "2020/1/7 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Rabbit Hole by The New York Times", "https://open.spotify.com/show/6dqqC8nkBTC3ldRs7pP4qn?si=DllQCtk-QAGyC6ysqmh3NA", "2020/4/23 07:43"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Chi Chi DeVayne & Thorgy Thor LSFYL | And I Am Telling You I'm Not Going - Jennifer Holliday", "https://www.facebook.com/logo/videos/chi-chi-devayne-thorgy-thor-lsfyl-and-i-am-telling-you-im-not-going-jennifer-hol/2753230954896979/", "2020/8/20 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Podcast Tecnopolítica", "https://www.youtube.com/c/PodcastTecnopol%C3%ADtica", "2020/9/3 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "TODAY'S NUMBER IS... 9/4/20", "https://www.youtube.com/watch?v=tvJXEj6PmiA", "2020/9/4 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Underground Resistance - Transition", "https://soundcloud.com/undergroundresistance/underground-resistance-transition", "2020/11/17 13:56"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Kanye West Presents: a DONDA Listening Event", "https://music.apple.com/us/station/kanye-west-presents-a-donda-listening-event/ra.1577426343", "2021/7/22 22:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "3: Quem tem medo de Criança Viada? by Santíssima Trindade das Perucas", "https://open.spotify.com/episode/5wtuqGyAf71p5jdWLBVqiR?si=KdefJipUTAu435ddYvnBWw", "2019/9/14 19:30"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "So the internet didn’t turn out the way we hoped. Where do we go from here?", "https://www.nytimes.com/interactive/2019/11/14/magazine/internet-future-dream.html", "2019/11/13 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "First Image of a Black Hole - NASA Science", "https://science.nasa.gov/resource/first-image-of-a-black-hole/", "2019/4/10 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Facebook is a growing and unstoppable digital graveyard", "https://www.bbc.com/future/article/20160313-the-unstoppable-rise-of-the-facebook-dead", "2019/4/27 06:46"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Aeon Flux 1995 S03E04 A Last Time for Everything", "https://www.dailymotion.com/video/x6ijh4h", "2019/11/17 00:00"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "ANDRE 3000 AND RICK RUBIN IN CONVERSATION", "https://brokenrecordpodcast.com/episode-13-andre-3000-and-rick-rubin-in-conversation", "2019/12/24 16:51"));
+    files.push(this.createLinkFile(downloadHistoryPath, "media", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "https://www.youtube.com/watch?v=ITu1QqH0a7w", "2019/12/24 16:51"));
+
 
     //---------Folder Video--------------
     const videoPath = "c:/My Documents/Video"
@@ -504,14 +505,10 @@ class Wrapper extends Component {
     files.push(this.createLinkFile(videoPath, "media", "Heribaldo Maia", "https://www.youtube.com/@heribaldomaia", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "ContraPoints", "https://www.youtube.com/@ContraPoints", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "Jonas Čeika - CCK Philosophy", "https://www.youtube.com/@jonasceikaCCK", "2025/7/27 00:00"));
-    files.push(this.createLinkFile(videoPath, "media", "First Image of a Black Hole - NASA Science", "https://science.nasa.gov/resource/first-image-of-a-black-hole/", "2019/4/10 00:00"));
-    files.push(this.createLinkFile(videoPath, "media", "Facebook is a growing and unstoppable digital graveyard", "https://www.bbc.com/future/article/20160313-the-unstoppable-rise-of-the-facebook-dead", "2019/4/27 06:46"));
     files.push(this.createLinkFile(videoPath, "media", "Paulo Freire - Pedagogia da Esperança", "https://construindoumaprendizado.wordpress.com/wp-content/uploads/2012/12/paulo-freire-pedagogia-da-esperanc3a7a-desbloqueado.pdf", "2019/6/26 20:30"));
-    files.push(this.createLinkFile(videoPath, "media", "3: Quem tem medo de Criança Viada? by Santíssima Trindade das Perucas", "https://open.spotify.com/episode/5wtuqGyAf71p5jdWLBVqiR?si=KdefJipUTAu435ddYvnBWw", "2019/9/14 19:30"));
-    files.push(this.createLinkFile(videoPath, "media", "So the internet didn’t turn out the way we hoped. Where do we go from here?", "https://www.nytimes.com/interactive/2019/11/14/magazine/internet-future-dream.html", "2019/11/13 00:00"));
-    files.push(this.createLinkFile(videoPath, "media", "Aeon Flux 1995 S03E04 A Last Time for Everything", "https://www.dailymotion.com/video/x6ijh4h", "2019/11/17 00:00"));
-    files.push(this.createLinkFile(videoPath, "media", "ANDRE 3000 AND RICK RUBIN IN CONVERSATION", "https://brokenrecordpodcast.com/episode-13-andre-3000-and-rick-rubin-in-conversation", "2019/12/24 16:51"));
-    files.push(this.createLinkFile(videoPath, "media", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "https://www.youtube.com/watch?v=ITu1QqH0a7w", "2019/12/24 16:51"));
+    files.push(this.createLinkFile(videoPath, "media", "Jones Manoel", "https://www.youtube.com/@JonesManoel", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "J Utah", "https://www.youtube.com/@jutah", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(videoPath, "media", "PunkDrag_SP", "https://www.youtube.com/@punkdrag_sp6156", "2025/7/27 00:00"));
 
 
     //---------Folder Podcast--------------
@@ -533,7 +530,7 @@ class Wrapper extends Component {
     files.push(this.createLinkFile(podcastPath, "sound", "Philosophize This!", "https://open.spotify.com/show/2Shpxw7dPoxRJCdfFXTWLE?si=be21b473973d439d", "2025/7/27 00:00"));
     files.push(this.createLinkFile(podcastPath, "sound", "Podcast Tecnopolítica", "https://open.spotify.com/show/55uTHZA0rs7ue5ajEJN9wp?si=0a4666c5e61c4977", "2025/7/27 00:00"));
     files.push(this.createLinkFile(podcastPath, "sound", "AmarElo - O filme invisível", "https://open.spotify.com/show/3tDur8V0wslvtOBskYdfHX?si=37b8bb38b66e458d", "2025/7/27 00:00"));
-    files.push(this.createLinkFile(podcastPath, "sound", "Machinic Unconscious Happy Hour", "https://open.spotify.com/episode/3puqFFqCxDEd9NatsRTCGc?si=ecc9055b02964933", "2025/7/27 00:00"));
+    files.push(this.createLinkFile(podcastPath, "sound", "Machinic Unconscious Happy Hour", "https://open.spotify.com/show/5TLpskP1hw9IfPDMAXPPju", "2025/7/27 00:00"));
     files.push(this.createLinkFile(podcastPath, "sound", "Mano a Mano", "https://open.spotify.com/show/0GnKiYeK11476CfoQEYlEd?si=7e6f39481bb34666", "2025/7/27 00:00"));
     files.push(this.createLinkFile(podcastPath, "sound", "Petit Journal", "https://open.spotify.com/show/75MOMlaBaE9Smo2Vp87CO2?si=3140727255da479c", "2025/7/27 00:00"));
     files.push(this.createLinkFile(podcastPath, "sound", "IRL: Online Life is Real Life", "https://open.spotify.com/show/0vT7LJMeVDxyQ2ZamHKu08?si=f0dfdba4dd3d4325", "2025/7/27 00:00"));

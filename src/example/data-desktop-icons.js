@@ -41,6 +41,39 @@ export default {
     }
   },
 
+  "About": {
+  filename: "About",
+  icon: "contact",
+  appProps: {
+    app: "Contact",
+    bio: `
+      <p>Mexican dev living in CDMX. Lover of retro UIs and experimental projects.</p>
+      <p>I specialize in JavaScript and creative coding. Always exploring web aesthetics.</p>
+    `,
+    contact: {
+      name: "Diege",
+      image: "https://yourdomain.com/images/profile.jpg",
+      items: [
+        {
+          text: "Email",
+          link: "mailto:diego@example.com",
+          value: "diego@example.com",
+        },
+        {
+          text: "Twitter",
+          link: "https://twitter.com/diegobarajas",
+          value: "@diegobarajas",
+        },
+        {
+          text: "GitHub",
+          link: "https://github.com/diegobarajas",
+          value: "diegobarajas",
+        },
+      ],
+    },
+  },
+}
+
   // Error: {
   //   filename: "Error",
   //   icon: "default",
