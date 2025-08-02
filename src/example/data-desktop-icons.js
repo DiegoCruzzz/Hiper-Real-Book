@@ -32,42 +32,34 @@ export default {
       content: 'leia-me',
     }
   },
-  "@doxpheal": {
-    filename: "@doxpheal",
-    icon: "default",
+  "Hiper Real.mp4": {
+    filename: "Hiper Real.mp4",
+    icon: "media",
     appProps: {
       app: "ExternalLinkApp",
       url: "https://www.youtube.com/@doxpheal"
     }
   },
 
-  "About": {
-  filename: "About",
+  "Sobre": {
+  filename: "Sobre",
   icon: "contact",
   appProps: {
     app: "Contact",
     bio: `
-      <p>Mexican dev living in CDMX. Lover of retro UIs and experimental projects.</p>
-      <p>I specialize in JavaScript and creative coding. Always exploring web aesthetics.</p>
+      <p><em>Hiper real</em> [livro eletrônico] / Doxpheal. — 1. ed. — Campinas, SP : Ed. do Autor, 2025.</p>
+      <p>PDF — ISBN 978-65-01-57114-0</p>
+      <p>1. Poesia brasileira I. Título.</p>
+      <p>25-284486 CDD-B869.1</p>
     `,
     contact: {
-      name: "Diege",
+      name: "Doxpheal",
       image: "https://yourdomain.com/images/profile.jpg",
       items: [
         {
-          text: "Email",
-          link: "mailto:diego@example.com",
-          value: "diego@example.com",
-        },
-        {
-          text: "Twitter",
-          link: "https://twitter.com/diegobarajas",
-          value: "@diegobarajas",
-        },
-        {
-          text: "GitHub",
-          link: "https://github.com/diegobarajas",
-          value: "diegobarajas",
+          text: "Instagram",
+          link: "http://instagram.com/doxpheal_",
+          value: "doxpheal_",
         },
       ],
     },

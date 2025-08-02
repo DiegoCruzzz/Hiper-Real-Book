@@ -71,6 +71,7 @@ const downloadImages = [
   new URL("../img/download/wanessa_wolf_reverso.gif", import.meta.url).href,
   new URL("../img/download/we_hit_the_elevator_madonna.gif", import.meta.url).href,
   new URL("../img/download/ygona_olhos_do_pai.jpg", import.meta.url).href,
+  new URL("../img/download/shinji_chair.jpg", import.meta.url).href,
 ];
 
 const allImages = [ ...downloadImages];

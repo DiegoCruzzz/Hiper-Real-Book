@@ -23,7 +23,7 @@ function Contact({ bio, contact, wmProps = {} }) {
       <div style={{ padding: "8px 7px" }}>
         <TabBox
           tabs={{
-            Summary: (
+            fileinfo: (
               <div class="ui95-tabdialog__card">
                 <div class="ui95-tabdialog__header">
                   {contact.image ? (
@@ -46,7 +46,7 @@ function Contact({ bio, contact, wmProps = {} }) {
                 </div>
               </div>
             ),
-            "Contact details": (
+            "whoami": (
               <div class="ui95-tabdialog__card">
                 <div class="ui95-tabdialog__header">
                   <Icon name="contact" size="32" />
@@ -54,13 +54,18 @@ function Contact({ bio, contact, wmProps = {} }) {
                 </div>
                 <Divider className="horizontal" />
                 <dl class="ui95-tabdialog__values">
-                  {contact.items.map(({ text, link, value }) => (
                     <Text>
-                      <dt class="ui95-tabdialog__key">{text}</dt>
-                      <dd>
-                        <a href={link}>{value}</a>
-                      </dd>
+                        <dt className="ui95-tabdialog__key" style={{padding:'10px'}}>
+                            "born and raised on the internet :)"
+                        </dt>
                     </Text>
+                    {contact.items.map(({text, link, value}) => (
+                      <Text>
+                          <dt class="ui95-tabdialog__key">{text}</dt>
+                          <dd>
+                            <a href={link}>{value}</a>
+                          </dd>
+                      </Text>
                   ))}
                 </dl>
               </div>

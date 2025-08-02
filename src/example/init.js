@@ -388,7 +388,8 @@ class Wrapper extends Component {
     files.push(this.createDownloadFile(downloadPath, "urach_shocked", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "wanessa_wolf_reverso", "gif", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "we_hit_the_elevator_madonna", "gif", "2025/7/27 00:00", "Image", "download"));
-    files.push(this.createDownloadFile(downloadPath, "ygona_olhos_do_pai", "jpg", "2025/7/27 00:00", "Image", "download"));
+    files.push(this.createDownloadFile(downloadPath, "shinji_chair", "jpg", "2025/7/27 00:00", "Image", "download"));
+
 
     //---------Folder History--------------
     const downloadHistoryPath = "c:/My Documents/Download/History"
