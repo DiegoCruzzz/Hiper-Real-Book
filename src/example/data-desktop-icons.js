@@ -54,7 +54,7 @@ export default {
     `,
     contact: {
       name: "Doxpheal",
-      image: "https://yourdomain.com/images/profile.jpg",
+      image: new URL("../img/doxpheal_pic.jpg", import.meta.url).href,
       items: [
         {
           text: "Instagram",
