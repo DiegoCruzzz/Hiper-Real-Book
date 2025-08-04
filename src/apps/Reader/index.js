@@ -1,7 +1,6 @@
-import { h, render, Component } from "preact";
+import { h, Component } from "preact";
 import Window from "../../components/Window";
 import ScrollableContainer from "../../components/ScrollableContainer/";
-import HTML from "../../components/HTML";
 import Share from "../../components/Toolbar/Share";
 import "./reader.css";
 

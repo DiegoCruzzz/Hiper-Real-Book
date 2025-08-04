@@ -6,7 +6,7 @@ import Text from "../../components/Text/";
 import Button from "../../components/Button/";
 import Icon from "../../components/Icon/";
 import Divider from "../../components/Divider/";
-import HTML from "../../components/HTML/";
+import HTML from "../../components/HTML";
 
 function Contact({ bio, contact, wmProps = {} }) {
   const onClose = wmProps.onClose;
@@ -36,7 +36,7 @@ function Contact({ bio, contact, wmProps = {} }) {
                   ) : (
                     <Icon name="contact" size="32" />
                   )}
-                  <Text type="h1">About {contact.name}</Text>
+                  <Text type="h1">About Hiper Real</Text>
                 </div>
                 <Divider className="horizontal" />
                 <div class="ui95-tabdialog__values">
@@ -56,7 +56,7 @@ function Contact({ bio, contact, wmProps = {} }) {
                 <dl class="ui95-tabdialog__values">
                     <Text>
                         <dt className="ui95-tabdialog__key" style={{padding:'10px'}}>
-                            "born and raised on the internet :)"
+                            born and raised on the internet :)
                         </dt>
                     </Text>
                     {contact.items.map(({text, link, value}) => (

@@ -7,7 +7,7 @@ const downloadImages = [
   new URL("../img/download/beans.jpg", import.meta.url).href,
   new URL("../img/download/big_imitando_emojis.jpg", import.meta.url).href,
   new URL("../img/download/cardi_sus.gif", import.meta.url).href,
-  new URL("../img/download/coesão_conceito_aclamação.jpg", import.meta.url).href,
+  new URL("../img/download/coesao_conceito_aclamacao.jpg", import.meta.url).href,
   new URL("../img/download/dies_cringe.jpg", import.meta.url).href,
   new URL("../img/download/esnupi_acabado.jpg", import.meta.url).href,
   new URL("../img/download/friend_too_woke.jpeg", import.meta.url).href,

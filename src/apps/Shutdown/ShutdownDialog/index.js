@@ -1,12 +1,9 @@
-import { h, render, Component } from "preact";
+import { h } from "preact";
 import "./style.css";
 import Window from "../../../components/Window";
-import TabBox from "../../../components/TabBox";
 import Text from "../../../components/Text";
 import Button from "../../../components/Button";
 import Icon from "../../../components/Icon";
-import Divider from "../../../components/Divider";
-import HTML from "../../../components/HTML";
 import Radio from "../../../components/Forms/Radio";
 
 function ShutdownDialog({ onChange, wmProps }) {

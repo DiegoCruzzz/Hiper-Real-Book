@@ -325,7 +325,7 @@ class Wrapper extends Component {
     files.push(this.createDownloadFile(downloadPath, "beans", "jpg", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "big_imitando_emojis", "jpg", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "cardi_sus", "gif", "2025/7/27 00:00", "Image", "download"));
-    //files.push(this.createDownloadFile(downloadPath, "coesão_conceito_aclamação", "jpg", "2025/7/27 00:00", "Image", "download"));
+    files.push(this.createDownloadFile(downloadPath, "coesao_conceito_aclamacao", "jpg", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "dies_cringe", "jpg", "2025/7/27 00:00", "Image", "download"));
     files.push(this.createDownloadFile(downloadPath, "esnupi_acabado", "jpg", "2025/7/27 00:00", "Image", "download")); // Corregido el nombre
     files.push(this.createDownloadFile(downloadPath, "friend_too_woke", "jpeg", "2025/7/27 00:00", "Image", "download"));
@@ -469,7 +469,8 @@ class Wrapper extends Component {
     files.push(this.createLinkFile(downloadHistoryPath, "default", "Facebook is a growing and unstoppable digital graveyard", "https://www.bbc.com/future/article/20160313-the-unstoppable-rise-of-the-facebook-dead", "2019/4/27 06:46"));
     files.push(this.createLinkFile(downloadHistoryPath, "default", "Aeon Flux 1995 S03E04 A Last Time for Everything", "https://www.dailymotion.com/video/x6ijh4h", "2019/11/17 00:00"));
     files.push(this.createLinkFile(downloadHistoryPath, "default", "ANDRE 3000 AND RICK RUBIN IN CONVERSATION", "https://brokenrecordpodcast.com/episode-13-andre-3000-and-rick-rubin-in-conversation", "2019/12/24 16:51"));
-    files.push(this.createLinkFile(downloadHistoryPath, "media", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "https://www.youtube.com/watch?v=ITu1QqH0a7w", "2019/12/24 16:51"));
+    files.push(this.createSingleVideoFile(downloadHistoryPath, "media", "Rick Rubin & Andre 3000 Talk Isolation, Loneliness & Wanting To Feel Normal on Broken Record Podcast", "ITu1QqH0a7w", "2019/12/24 16:51"));
+    files.push(this.createLinkFile(downloadHistoryPath, "default", "Paulo Freire - Pedagogia da Esperança", "https://construindoumaprendizado.wordpress.com/wp-content/uploads/2012/12/paulo-freire-pedagogia-da-esperanc3a7a-desbloqueado.pdf", "2019/6/26 20:30"));
 
 
     //---------Folder Video--------------
@@ -506,7 +507,6 @@ class Wrapper extends Component {
     files.push(this.createLinkFile(videoPath, "media", "Heribaldo Maia", "https://www.youtube.com/@heribaldomaia", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "ContraPoints", "https://www.youtube.com/@ContraPoints", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "Jonas Čeika - CCK Philosophy", "https://www.youtube.com/@jonasceikaCCK", "2025/7/27 00:00"));
-    files.push(this.createLinkFile(videoPath, "media", "Paulo Freire - Pedagogia da Esperança", "https://construindoumaprendizado.wordpress.com/wp-content/uploads/2012/12/paulo-freire-pedagogia-da-esperanc3a7a-desbloqueado.pdf", "2019/6/26 20:30"));
     files.push(this.createLinkFile(videoPath, "media", "Jones Manoel", "https://www.youtube.com/@JonesManoel", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "J Utah", "https://www.youtube.com/@jutah", "2025/7/27 00:00"));
     files.push(this.createLinkFile(videoPath, "media", "PunkDrag_SP", "https://www.youtube.com/@punkdrag_sp6156", "2025/7/27 00:00"));

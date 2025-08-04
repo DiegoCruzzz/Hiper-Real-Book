@@ -3,15 +3,6 @@ export default [
     text: "Programs",
     icon: "programs",
     items: [
-      {
-        text: "Road Blocks",
-        icon: "default",
-        appProps: {
-          app: "Webview",
-          title: "Road Blocks",
-          src: "https://roadblocks.ash.ms/game/"
-        }
-      },
       { text: "Explorer", icon: "explorer", appProps: { app: "Explorer" } },
       {
         text: "Paint",
@@ -24,7 +15,7 @@ export default [
       }
     ]
   },
-  { text: "Documents", icon: "documents" },
+  { text: "Documents", icon: "documents", appProps: { app: "Explorer", path: "/c:/My Documents" } },
   { text: "Settings", icon: "settings", appProps: { app: "DisplayProperties" } },
   { text: "Search", icon: "search" },
   { text: "Help", icon: "help" },
