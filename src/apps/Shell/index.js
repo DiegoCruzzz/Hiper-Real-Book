@@ -44,6 +44,20 @@ class Shell extends Component {
     window.addEventListener("error", this.onerror);
     window.addEventListener("unhandledrejection", this.onerror);
     window.shell = (...args) => this[args.shift()](...args);
+
+    const params = new URLSearchParams(window.location.search);
+    const content = params.get('content');
+    const contentType = params.get('contentType');
+
+    if (content) {
+      this.openWindow("Reader", {
+        content: content,
+        contentType: contentType,
+        title: `Reader - ${content.replace(/-/g, ' ')}`,
+      });
+
+      history.pushState({}, '', window.location.pathname);
+    }
   }
   componentWillUnmount() {
     document.body.removeEventListener("mousedown", this.globalClick);

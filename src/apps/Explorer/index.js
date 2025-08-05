@@ -113,7 +113,11 @@ class Explorer extends Component {
           >
             <div class="ui95-explorer-columns__left">
               <div class="ui95-explorer-columns__left-head">
-                <Icon size={32} name={file ? file.icon : folder.icon} />
+                <Icon
+                  size={file && file.icon === "sound" ? 16 : 32}
+                  name={file ? file.icon : folder.icon}
+                  style={{ width: "32px", height: "32px" }}
+                />
                 <Text style={{ fontWeight: "bold" }}>
                   <h2 class="ui95-explorer-columns__folder-name">
                     {selectedItem.label || selectedItem.filename}

@@ -166,14 +166,22 @@ class Reader extends Component {
 
   render({ content, contentType, wmProps }) {
     let RenderableContent = null;
+    let shareTitle = "This is a Default title";
+    let shareUrl = window.location.origin;
 
     if (typeof content === "string") {
       if (contentType === "download") {
         RenderableContent = <SingleImageReader imageName={content} />;
+        shareTitle = `Descarga el archivo: ${content}`;
+        shareUrl = `${shareUrl}?content=${content}&contentType=download`;
+
       } else {
         const ComponentDefinition = contentComponents[content];
         if (ComponentDefinition) {
           RenderableContent = <ComponentDefinition />;
+          shareTitle = `Mira "${content.replace(/-/g, ' ')}"`;
+          shareUrl = `${shareUrl}?content=${content}&contentType=text`;
+
         } else {
           console.warn(`Component definition not found for content: ${content}`);
           RenderableContent = <p>⚠️ Conteúdo não encontrado</p>;
@@ -188,7 +196,7 @@ class Reader extends Component {
         height={600}
         {...wmProps}
       >
-        <Share />
+        <Share shareUrl={shareUrl} shareText={shareTitle} />
         <ScrollableContainer ref={(el) => (this.scrollable = el)}>
           <article className="ui95__reader-wrap" ref={(el) => (this.el = el)}>
               {RenderableContent}

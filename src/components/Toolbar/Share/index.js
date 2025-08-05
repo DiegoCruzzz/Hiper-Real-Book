@@ -2,23 +2,27 @@ import { h, render, Component } from "preact";
 import shareLinks from "social-share-links";
 import Toolbar from "../";
 
-function activate(link) {
-  return () => window.open(shareLinks(link));
+function activate(link, shareUrl, shareText) {
+  return () => window.open(shareLinks(link, {
+    url: shareUrl,
+    text: shareText
+  }));
 }
 
-export default function Share({}) {
+export default function Share({ shareUrl, shareText }) {
+  const items = [
+    { text: "Share" },
+    { text: "Facebook", icon: "facebook", onClick: activate("Facebook", shareUrl, shareText) },
+    { text: "Twitter", icon: "tweet", onClick: activate("Twitter", shareUrl, shareText) },
+    { text: "LinkedIn", icon: "linkedin", onClick: activate("LinkedIn", shareUrl, shareText) },
+    { text: "Reddit", icon: "reddit", onClick: activate("Reddit", shareUrl, shareText) },
+    { text: "WhatsApp", icon: "whatsapp", onClick: activate("WhatsApp", shareUrl, shareText) },
+    { text: "Email", icon: "email", onClick: activate("Email", shareUrl, shareText) }
+  ];
   return (
     <Toolbar
       variant="stacked"
-      items={[
-        { text: "Share" },
-        { text: "Facebook", icon: "facebook", onClick: activate("Facebook") },
-        { text: "Twitter", icon: "tweet", onClick: activate("Twitter") },
-        { text: "LinkedIn", icon: "linkedin", onClick: activate("LinkedIn") },
-        { text: "Reddit", icon: "reddit", onClick: activate("Reddit") },
-        { text: "WhatsApp", icon: "whatsapp", onClick: activate("WhatsApp") },
-        { text: "Email", icon: "email", onClick: activate("Email") }
-      ]}
+      items={items}
     />
   );
 }

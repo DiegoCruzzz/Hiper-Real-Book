@@ -7,7 +7,7 @@ export default function NetworkIcon() {
     <div className="ui95-network-icon">
       <div className="ui95-network-icon__in" />
       <div className="ui95-network-icon__out" />
-      <Img alt="" src={require("./icon.png")} />
+      <Img alt="" src={new URL("./icon.png", import.meta.url).href} />
     </div>
   );
 }
